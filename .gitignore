@@ -1,5 +1,6 @@
 .idea
 .gitignore
+node_modules
 prod
 npm-debug.log
 debug.log
