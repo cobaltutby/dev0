@@ -394,7 +394,7 @@ export class Stability
 {
     data: StabilityData;
     gotData: boolean;
-    enteredData: {};
+    enteredData: any [];
 }
 export class StabilityData
 {

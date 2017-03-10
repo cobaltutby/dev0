@@ -104,26 +104,24 @@ export class HTTPService
                     .map(this.extract)
                     .catch(this.handleError);
   }
-  runProtocolGetStabilityView (protocolPath: string, params?: {}): Observable<any> 
+  runProtocolGetStabilityView (protocolPath: string, params?: {}): Promise<any> 
   {
-    console.log('runProtocolGetStabilityView');
     return this.http.get('assets/json/stabilitySetupProtocol.json')
-                    .map(this.extract)
-                    .catch(this.handleError);
+                    .toPromise()
+                    .then(this.extract);
   }
-  runProtocolGetEnteredStabilityData (protocolPath: string, params?: {}): Observable<any> 
+  runProtocolGetEnteredStabilityData (protocolPath: string, params?: {}): Promise<any> 
   {
-    console.log('runProtocolGetEnteredStabilityDaya');
     return this.http.get('assets/json/getEnteredStabilityData.json')
-                    .map(this.extract)
-                    .catch(this.handleError);
+                    .toPromise()
+                    .then(res => res.json());
   }
   
   runProtocolGetStabilityData (protocolPath: string, params?: {}): Observable<any> 
   {
     console.log('runProtocolGetStabilityDaya');
     return this.http.get('assets/json/StabilityData.json')
-                    .map(this.extract)
+                    .map(this.extract2)
                     .catch(this.handleError);
   }
   runProtocolPost (protocolPath: string, params?: {}, data?: {}): Observable<any> 
@@ -143,6 +141,25 @@ export class HTTPService
                     .catch(this.handleError);
   }
   private extract(res: Response) {
+
+      let body = res.json();
+      return body || { };
+
+      //string implementation
+      //let data: string = res['_body'] || '';
+      //return data || '';
+  }
+    private extract1(res: Response) {
+
+      let body = res.json();
+      console.dir(body);
+      return body || { };
+
+      //string implementation
+      //let data: string = res['_body'] || '';
+      //return data || '';
+  }
+    private extract2(res: Response) {
 
       let body = res.json();
       return body || { };

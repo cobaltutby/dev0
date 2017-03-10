@@ -21,7 +21,7 @@ export class StabilityComponent
                 )
     {
       this.state.current.name = 'stability';
-      this.stability.loadStabilityView();
+      
       //this.stability.loadStabilityPlots();
     } 
     ngOnInit()
@@ -30,6 +30,7 @@ export class StabilityComponent
     
       this.stability.stabilityPlotDivAll = document.getElementById('stability-plots-all');
       this.stability.stabilityPlotDivThis = document.getElementById('stability-plots-this-pH');
+      this.stability.loadStabilityView();
     }
   
 }
