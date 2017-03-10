@@ -1,5 +1,5 @@
 .idea
-node_modules
+.gitignore
 npm-debug.log
 debug.log
 _test-output
