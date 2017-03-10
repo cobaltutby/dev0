@@ -1,0 +1,61 @@
+<div>
+    <h2>Test weeks and temperatures</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Week
+                </th>
+                <th class="pad-left" *ngFor="let node of experimentSetup.testSchedule.allWeeks">
+                    {{node.week}}
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let node of experimentSetup.testSchedule.schedule">
+                <td>{{node.name}}</td>
+                
+                <td class="pad-left" *ngFor="let week of node.weeks.week">
+                    <button *ngIf="week.doTest" [ngClass]="{true: 'btn btn-ok glyphicon glyphicon-ok', false: 'btn btn-danger glyphicon glyphicon-remove'}[week.doTest]" (click)="design.updateTestStatus(week)"></button>
+                    <button *ngIf="!week.doTest" [ngClass]="{true: 'btn btn-ok glyphicon glyphicon-ok', false: 'btn btn-danger glyphicon glyphicon-remove'}[week.doTest]" (click)="design.updateTestStatus(week)"></button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h3>Storage temperatures</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Temperature</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let node of experimentSetup.testSchedule.temperatures">
+                <td>{{node.temperature}}</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <div [hidden]="!experimentSetup.experimentTypes.gotData" class="form-inline">
+        <label class="test-sched-label" for="newWeek">Edit test weeks</label>
+        <input class="form-control test-sched-input" type="number" id="newWeek" required [(ngModel)]="design.newWeek.week" #testweeks="ngModel"/>
+        <button [disabled]="!testweeks.valid" class="btn btn-primary btn-xs" title="Add new testing week" (click)="design.newTestWeek()"><span class="glyphicon glyphicon-plus"></span></button>
+        <button [disabled]="!testweeks.valid" class="btn btn-danger btn-xs" title="Remove testing week" (click)="design.removeTestWeek()"><span class="glyphicon glyphicon-minus"></span></button>
+    </div>
+    
+    <div [hidden]="!experimentSetup.experimentTypes.gotData" class="form-inline">
+        <label class="test-sched-label" for="newWeek">Edit storage temperatures</label>
+        <input class="form-control test-sched-input" type="text" id="newTemp" required [(ngModel)]="design.newTemp.temperature" #temperatures="ngModel"/>
+        <button [disabled]="!temperatures.valid" class="btn btn-primary btn-xs" title="Add new storage temperature" (click)="design.newStorageTemp()"><span class="glyphicon glyphicon-plus"></span></button>
+        <button [disabled]="!temperatures.valid" class="btn btn-danger btn-xs" title="Remove storage temperature" (click)="design.removeStorageTemp()"><span class="glyphicon glyphicon-minus"></span></button>
+    </div>
+    
+    <div [hidden]="!experimentSetup.experimentTypes.gotData">
+        <button type="button" [ngClass]="state.prevButtonClass()" (click)="state.prevState()">Previous</button>
+        <br/><br/><h3>Save for</h3>
+        <button type="button" class="btn btn-warning active" (click)="design.saveToExperiment()">Manual</button>
+        <button type="button" class="btn btn-success active">High Throughput</button>
+    </div>
+</div>

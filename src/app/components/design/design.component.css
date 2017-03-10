@@ -1,0 +1,47 @@
+.btn-group .button {
+    /*background-color: #4CAF50; /* Green */
+    /*border: 1px solid green; */
+    color: black;
+    padding: 15px 1px;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    display: block;
+    background-color: white;
+}
+
+.btn-group .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+
+.btn-group .button:hover {
+    background-color: white;
+    color: red;
+}
+.btn-group .button:disabled {
+    background-color: white;
+    color: black;
+    cursor: not-allowed;
+}
+button {
+  font-family: Arial;
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  cursor: hand;
+}
+button:hover {
+  background-color: #cfd8dc;
+}
+.btn[disabled],
+html input[disabled] {
+    cursor: not-allowed !important;
+ background-color: #eee;
+ border-color: #ddd;
+ color: #ddd;
+}

@@ -1,0 +1,20 @@
+
+<div *ngIf="!app.trialIsNotSelected()" style="width: 100%; float: left;" class="pad-top" >
+
+    <div style="float: left; width: 15%;" class="btn-group">
+       
+        <button class="button" *ngFor="let step of DesignSteps; let i=index;"
+        (click)="state.setTabState(i)" [disabled]="state.isTabDisabled(i)">{{step}}</button>   
+
+    </div>
+
+    <div style="float: left; width: 85%;">
+        <my-parentformulation   *ngIf="state.activeTab === 0"></my-parentformulation>
+        <my-experimenttype      *ngIf="state.activeTab === 1"></my-experimenttype>
+        <my-testformulations    *ngIf="state.activeTab === 2"></my-testformulations>
+        <my-processparameters   *ngIf="state.activeTab === 3"></my-processparameters>
+        <my-testshedule         *ngIf="state.activeTab === 4"></my-testshedule>
+    </div>
+
+</div>
+

@@ -1,0 +1,37 @@
+<my-header></my-header>
+
+ <nav>
+    <a 
+        [ngClass]="app.linkClass('design')" 
+        routerLinkActive="active" 
+
+        (click)="navigate('design')"
+        >
+        Design {{app.selection.trial_name}}
+    </a>
+
+    <a 
+        [ngClass]="app.linkClass('formulation')" 
+        routerLink="/formulation" 
+        routerLinkActive="active" 
+
+        (click)="navigate('formulation')"
+        >
+        Formulation
+    </a>
+
+    <a 
+        [ngClass]="app.linkClass('stability')"
+        routerLink="/stability" 
+        routerLinkActive="active" 
+        (click)="navigate('stability')"
+        >
+        Stability
+     </a>
+</nav>
+
+<hr>
+
+<router-outlet></router-outlet>
+
+

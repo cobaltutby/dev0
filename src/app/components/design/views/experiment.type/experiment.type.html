@@ -1,0 +1,49 @@
+<div>
+    <h2>Experiment type</h2>
+
+       <!-- [show]="experimentSetup.experimentType.gotData()"-->
+         <div >
+            <form class="form" *ngIf = "designData.experimentTypes.gotData">
+            <select class="form-control" 
+                    name="Experiment type" 
+                    id="ExperimentTypeSelect" 
+                    required [(ngModel)]="type" 
+                    (change)="changeType()">
+                
+                <option *ngFor="let i of experimentSetup.experimentTypes.data.experimentTypes">{{i.Type}}</option>
+            </select>
+            </form>
+            <div >
+                <div *ngFor="let sellist of experimentSetup.experimentTypes.selected.list">{{sellist}}<br/>
+
+                    <select multiple class="form-control" 
+                            [name]="sellist" 
+                            [(ngModel)]="experimentSetup.experimentTypes.selected[list]">
+
+                        <option *ngFor="let PF of experimentSetup.parentFormulation.data.formulation">{{PF.name}}</option>
+
+                    </select>
+
+                </div>
+                <div *ngFor="let ing of experimentSetup.experimentTypes.selected.ing">{{ing}}<br/>
+
+                    <select class="form-control" 
+                            [(ngModel)]="experimentSetup.experimentTypes.selected[ing]" 
+                            [name]="ing">
+
+                        <option *ngFor="let PF1 of experimentSetup.parentFormulation.data.formulation" [value]="PF1.name">{{PF1.name}}</option>
+                        
+                    </select>             
+                </div>
+
+        <!--lower, Upper limits and Increment -->
+                <div *ngFor="let num of experimentSetup.experimentTypes.selected.number">{{num}}<br/>
+                    <input type="number" [(ngModel)]="experimentSetup.experimentTypes.selected[num]" [name]="num" step="0.01">
+                </div>
+            </div>
+        </div>
+        <button [ngClass]="state.prevButtonClass()" (click)="state.prevState()">Previous</button>
+        <button [ngClass]="state.nextButtonClass()" (click)="state.nextState()">Next</button>
+
+</div>
+

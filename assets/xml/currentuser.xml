@@ -1,0 +1,54 @@
+<sci:data xmlns:sci="http://www.SciTegic.com/" object="SciTegic.PropertyList.1">
+<sci:proplist>
+<sci:propval name="username">pnekhaichuk</sci:propval>
+<sci:propval name="domain">MAIN</sci:propval>
+<sci:propval name="key">
+AmL4AewAAQAAAAAADrX5TQbY5FPvNgl7f02AlTMoPmkSwaXVCmudw/LTrYbmjkagyHWIVxmdE5MMx7GXD6MzXo8/UPidR1tlgyr+qKecaUZC4vZQ79i7wpiXzh79KT2AFWzBtgqGvAJQ2ZXwkpc+MBFh9vw0wQcobUokRLhLEEKbKyVw3y96pGncnBZUphWO/RXPiXqPwX/NAai8qyxhXEnRprear4W8WzYVG8GLMRO1ptRxUI2iakiCflr9ceH4Eo0sClnj+0ApWlE159LQuJdGxREbOy5RRMg/y+TwI+ONt6hDX8coN6VdwXXN0R2f9lqVK6lGCqMQsFRx9X2OfKjpaqzE8lXu4fTnMUZ3s0u/HUeZ3HPk9q76gHNQFlWAMX5aosgWnjWrQoXpidh45bRdbo/yUgT5xk1LEor7AlfOHl3+G7dB8tnuVsGsAFyDGdbZkd0mzNDgMlFlb0tv4n22qy8Ay5ZYVG3vQCgSfUixjOz5WKeK6KlUtl8G8hvsfT4+t5dyC5E32rHGpHz26oYzHFbmHoZg5PouE2xd1qavVyafhGSZu86wbF3jbuX763MywLprysMWvSyGV3bv0ZkedIyz71H/4ix0vlKgim1jQ0I1EzKOyLIJfJfvIhjGbASi+grsihucsrWSKAzS7YpJk2fO6fG2BRzeygSxiQSdW1h6
+</sci:propval>
+<sci:propval name="expirationTime">2017-03-29T14:07:08Z</sci:propval>
+<sci:propval name="serverIP">10.10.4.150</sci:propval>
+<sci:propval name="clientIP">10.10.4.87</sci:propval>
+<sci:propval name="loginTime">2017-02-27T14:07:08Z</sci:propval>
+<sci:propval name="clientAPI"/>
+<sci:propval name="clientType">
+UA:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36 OPR/43.0.2442.991
+</sci:propval>
+<sci:propval name="clientName">pnekhaichuk.scnsoft.com</sci:propval>
+<sci:propval name="clientVersion">17.1.0.115</sci:propval>
+<sci:propval name="soapLocator">
+http://srv-ict-14652.scnsoft.com:9944/scitegic/locator
+</sci:propval>
+<sci:propval name="soapXMLDB">
+http://srv-ict-14652.scnsoft.com:9944/scitegic/xmldb
+</sci:propval>
+<sci:propval name="soapLog">http://srv-ict-14652.scnsoft.com:9944/scitegic/log</sci:propval>
+<sci:propval name="SPNEGO">true</sci:propval>
+<sci:propval name="SPNEGODelegation">false</sci:propval>
+<sci:propval name="anonymous">false</sci:propval>
+<sci:propval name="isServiceAccount">false</sci:propval>
+<sci:propval name="impersonation">false</sci:propval>
+<sci:propval name="isActiveAdmin">false</sci:propval>
+<sci:propval name="userLabel"/>
+<sci:propval name="commonName"/>
+<sci:propval name="email"/>
+<sci:propval name="fullName"/>
+<sci:propval name="jobID"/>
+<sci:mpropval name="group" type="StringType">
+<sci:value>Platform/Everyone</sci:value>
+<sci:value>Platform/Users</sci:value>
+<sci:value>Platform/WebPort/Users</sci:value>
+<sci:value>QueryService/Users</sci:value>
+<sci:value>List Management/Users</sci:value>
+</sci:mpropval>
+<sci:mpropval name="permission" type="StringType">
+<sci:value>Platform/Logon</sci:value>
+<sci:value>Platform/PipelinePilot/Logon</sci:value>
+<sci:value>Platform/RunProtocol</sci:value>
+<sci:value>Platform/WebPort/Logon</sci:value>
+<sci:value>QueryService/Logon</sci:value>
+<sci:value>List Management/Logon</sci:value>
+</sci:mpropval>
+<sci:mpropval name="pkgEditor" type="StringType"/>
+<sci:propval name="expirationSecondsRemaining">2592000</sci:propval>
+</sci:proplist>
+</sci:data>

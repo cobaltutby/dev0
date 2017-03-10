@@ -1,0 +1,118 @@
+/* Add a class for editable/non editable, we will need to add mroe for the groupings of columns */
+.handsontable .editableCol {
+  background-color: White;
+}
+
+.handsontable .nonEditableCol {
+  background-color: MintCream;
+}
+
+/*
+.handsontable col.rowHeader {
+    width: 300;
+    text-align: left;
+}
+*/
+
+ng-color-picker ul {
+    padding: 0;
+    margin: 0;
+}
+
+ng-color-picker li {
+    width:20px;
+    height:20px;
+    box-sizing:border-box;
+    display:inline-block;
+}
+
+ng-color-picker li.selected {
+    border: 1px solid #333;
+}
+
+.form-control-inline {
+    min-width: 0;
+    width: auto;
+    display: inline;
+}
+
+.form-horizontal .form-group input {
+	width:140px;
+}
+
+.form-horizontal .form-group label {
+	width:90px;
+    padding-right: 10px;
+}
+
+.form-horizontal .form-group select {
+	width:140px;
+}
+
+.form-horizontal .dropdown-menu li > a {
+    text-align: center;
+}
+
+.ingredientrow {
+    background-color: #F4F6F9
+}
+
+.processrow {
+    background-color: #CCE0F1
+}
+
+.pad-top {
+    padding-top: 25px;
+}
+
+.my-drop-zone { 
+    border: 3px dotted lightgray; 
+}
+
+.nv-file-over { 
+    border: 3px dotted red;
+} /* Default class applied to drop zones on over */
+
+.test-sched-label {
+    width: 200px;
+}
+
+.test-sched-input {
+    width: 150px;
+}
+
+.pad-left {
+    padding-left: 10px;
+}
+
+.pad-bottom {
+    padding-bottom: 10px;
+}
+
+.loading-hider {
+    position: absolute;
+    width: 2000px;
+    height: 2000px;
+    z-index: 99;
+    background-color: black;
+    opacity: 0.6;
+}
+
+.loading-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10em;
+    height: 10em;
+    margin-top: -5em;
+    margin-left: -5em;
+    border: 2px solid #555;
+    text-align: center;
+    z-index: 100;
+}
+
+.changes-warning {
+    font-weight: bold;
+    color: red;   
+    font-size: large;
+}

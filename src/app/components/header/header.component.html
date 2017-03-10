@@ -1,0 +1,69 @@
+<title>Lab Automation</title>
+
+<div style="position:absolute;right:0;">
+    <button  class="btn btn-info btn-sm" ng-click="logout()">{{userName}} Logout</button>
+    <button  class="btn btn-info btn-sm" ng-click="hideHeader()">Show/Hide</button>
+    <button  class="btn btn-info btn-sm" ng-click="duplicateView()">New Tab</button>   
+    
+</div>
+
+<h2 align="center">{{app.header}}{{workFlowType}}</h2>
+
+<form class="form-inline">
+        <label for="project">Project</label>
+        <select class="form-control" id="project"
+            required
+            [(ngModel)]="app.selection.project_name" 
+            name="project_name"
+            #project="ngModel">  
+
+            <option myHighlight *ngFor="let d of (app.CPanelData 
+            | unique:'project_name')" 
+            [value]="d.project_name">{{d.project_name}}
+            </option>
+
+        </select>
+
+        <label for="subproject">Subproject</label>
+        <select class="form-control" id="subproject"
+            required
+            [(ngModel)]="app.selection.subproject_name" 
+            name="subproject_name"
+            #project="ngModel">   
+
+            <option *ngFor="let d of (app.CPanelData 
+            | unique:'subproject_name' 
+            | contain: 'project_name' : app.selection.project_name)"  
+            [value]="d.subproject_name">{{d.subproject_name}}
+            </option>
+
+        </select>
+
+        <label for="subproject">Experiment</label>
+        <select class="form-control" id="trial" (change)="app.changeTrial()"
+            required
+            [(ngModel)]="app.selection.trial_name" 
+            name="trial_name"
+            #project="ngModel">  
+
+            <option *ngFor="let d of (app.CPanelData 
+            | unique:'trial_name'
+            | contain:'project_name':app.selection.project_name 
+            | contain:'subproject_name':app.selection.subproject_name)" 
+            [value]="d.trial_name">{{d.trial_name}}</option>
+
+        </select>
+
+    <button type="button" class="btn btn-info btn-sm" [disabled]="!project.valid" (click)="app.changeTrial()" id="load">Load Experiment</button>
+    
+
+    <button type="button" class="btn btn-info btn-sm" [disabled]="!project.valid" (click)="app.launchExperiment()" id="launch">Launch Experiment</button>   
+</form>
+<br>
+             
+
+
+            
+ 
+        
+

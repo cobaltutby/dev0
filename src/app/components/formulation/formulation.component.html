@@ -1,0 +1,40 @@
+<div id="formulation-all">
+    <div>
+        <button class="btn btn-warning" uib-btn-radio="'manual'">Manual</button>
+        <button class="btn btn-success" uib-btn-radio="'auto'">High Throughput</button>
+        
+        <button  class="btn btn-success" [hidden]="!formulation.executionMode=='auto'">Load EMS Data</button>
+        <button  class="btn btn-info">Save</button>
+        <button  class="btn btn-info" (click)="formulation.switchToStability()">Save and Continue</button>
+    </div>
+    <div id="print-area">
+        <div id="normal-print-area" [hidden]="formulation.formulationData.isDoseResponse">
+            <h2>Formulation design</h2>
+            <div id="process-formulation-table"></div>
+        </div>
+
+        <div id="dose-response-print-area" [hidden]="!formulation.formulationData.isDoseResponse">
+            <h2>Dose response formulation design</h2>
+            <div id="main-batch-formulation-table"></div>
+
+            <h2>Individual formulations</h2>
+            <div id="hole-fill-formulation-table"></div>
+        </div>
+    </div>
+
+    <div class="pad-top">
+        <button class="btn btn-info" (click)="formulation.getPDF()">
+            Print
+        </button>
+        <button class="btn btn-info" (click)="formulation.copyPlannedToActual()">
+            Copy planned to actual
+        </button>
+        <button class="btn btn-info" (click)="formulation.clearActual()">
+            Clear actual
+        </button>
+        <button class="btn btn-info" (click)="formulation.saveData()">
+            Save data to Experiment
+        </button>
+    </div>
+</div>
+<div id="process-formulation-plot" ng-show="showPlots"></div>

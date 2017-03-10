@@ -1,0 +1,154 @@
+{ 
+    "formulation": 
+    [ 
+        {
+            "formulation_name":"Formulation 1",
+            "formulation":
+            {
+                "Water":
+                {
+                    "percent_weight":65.62,"name_key":"ing_water"
+                },
+                "Tin_5BMGX":
+                { 
+                    "percent_weight":0.1,"name_key":"ing_tin_5bmgx"
+                },
+                "Glyc":
+                { 
+                    "percent_weight":1.13,"name_key":"ing_glyc"
+                },
+                "MPG":
+                { 
+                    "percent_weight":1.5,
+                    "name_key":"ing_mpg"
+                },
+                "NI":
+                { 
+                    "percent_weight":3,
+                    "name_key":"ing_ni"
+                },
+                "Acu_WR":
+                { 
+                    "percent_weight":0.56,
+                    "name_key":"ing_acu_wr"
+                },
+                "TEA":
+                { 
+                    "percent_weight":0.56,
+                    "name_key":"ing_tea"
+                },
+                "EU LAS":
+                { 
+                    "percent_weight":6,
+                    "name_key":"ing_eu las"
+                },
+                "CitA":
+                { 
+                    "percent_weight":1.13,
+                    "name_key":"ing_cita"
+                },
+                "FA":
+                { "percent_weight":0.6,"name_key":"ing_fa"},
+                "D2066": { "percent_weight":0.68,"name_key":"ing_d2066"},
+                "SLES3EO EU Syn": { "percent_weight":4,"name_key":"ing_sles3eo_eu_syn"},
+                "CAPB":{ "percent_weight":0,"name_key":"ing_capb"},
+                "HP 20":{ "percent_weight":2.25,"name_key":"ing_hp_20"},
+                "UL 50":{ "percent_weight":0.6,"name_key":"ing_ul_50"},
+                "NaCl":{ "percent_weight":1.25,"name_key":"ing_nacl"},
+                "PGXL":{ "percent_weight":0.02,"name_key":"ing_pgxl"},
+                "Sol_14":{ "percent_weight":1,"name_key":"ing_sol_14"},
+                "Water_balanced":{ "percent_weight":10,"name_key":"ing_water"},
+                "D2010":{ "percent_weight":0,"name_key":"ing_d2010"}
+            } 
+        }, 
+        {
+            "formulation_name":"Formulation 2",
+            "formulation":
+            {
+                "Water":{"percent_weight":65.62,"name_key":"ing_water"},
+                "Tin_5BMGX":{ "percent_weight":0.1,"name_key":"ing_tin_5bmgx"},
+                "Glyc":{ "percent_weight":1.13,"name_key":"ing_glyc"},
+                "MPG":{ "percent_weight":1.5,"name_key":"ing_mpg"},
+                "NI":{ "percent_weight":3,"name_key":"ing_ni"},
+                "Acu_WR":{ "percent_weight":0.56,"name_key":"ing_acu_wr"},
+                "TEA":{ "percent_weight":0.56,"name_key":"ing_tea"},
+                "EU LAS":{ "percent_weight":6,"name_key":"ing_eu las"},
+                "CitA":{ "percent_weight":1.13,"name_key":"ing_cita"},
+                "FA":{ "percent_weight":0.6,"name_key":"ing_fa"},
+                "D2066":{ "percent_weight":0.68,"name_key":"ing_d2066"},
+                "SLES3EO EU Syn":{ "percent_weight":4,"name_key":"ing_sles3eo_eu_syn"},
+                "CAPB":{ "percent_weight":0,"name_key":"ing_capb"},
+                "HP 20":{ "percent_weight":2.25,"name_key":"ing_hp_20"},
+                "UL 50":{ "percent_weight":0.6,"name_key":"ing_ul_50"},
+                "NaCl":{ "percent_weight":1.25,"name_key":"ing_nacl"},
+                "PGXL":{ "percent_weight":0.02,"name_key":"ing_pgxl"},
+                "Sol_14":{ "percent_weight":1,"name_key":"ing_sol_14"},
+                "Water_balanced":{ "percent_weight":9,"name_key":"ing_water"},
+                "D2010":{ "percent_weight":1,"name_key":"ing_d2010"} 
+            } 
+        }, 
+        {
+            "formulation_name":"Formulation 3",
+            "formulation":
+            {
+                "Water":{"percent_weight":65.62,"name_key":"ing_water"},"Tin_5BMGX":{ "percent_weight":0.1,"name_key":"ing_tin_5bmgx"},"Glyc":{ "percent_weight":1.13,"name_key":"ing_glyc"},"MPG":{ "percent_weight":1.5,"name_key":"ing_mpg"},"NI":{ "percent_weight":3,"name_key":"ing_ni"},"Acu_WR":{ "percent_weight":0.56,"name_key":"ing_acu_wr"},"TEA":{ "percent_weight":0.56,"name_key":"ing_tea"},"EU LAS":{ "percent_weight":6,"name_key":"ing_eu las"},"CitA":{ "percent_weight":1.13,"name_key":"ing_cita"},"FA":{ "percent_weight":0.6,"name_key":"ing_fa"},"D2066":{ "percent_weight":0.68,"name_key":"ing_d2066"},"SLES3EO EU Syn":{ "percent_weight":4,"name_key":"ing_sles3eo_eu_syn"},"CAPB":{ "percent_weight":0,"name_key":"ing_capb"},"HP 20":{ "percent_weight":2.25,"name_key":"ing_hp_20"},"UL 50":{ "percent_weight":0.6,"name_key":"ing_ul_50"},"NaCl":{ "percent_weight":1.25,"name_key":"ing_nacl"},"PGXL":{ "percent_weight":0.02,"name_key":"ing_pgxl"},"Sol_14":{ "percent_weight":1,"name_key":"ing_sol_14"},"Water_balanced":{ "percent_weight":8,"name_key":"ing_water"},"D2010":{ "percent_weight":2,"name_key":"ing_d2010"} 
+            } 
+        }, 
+        {
+            "formulation_name":"Formulation 4",
+            "formulation":
+            {
+                "Water":{"percent_weight":65.62,"name_key":"ing_water"},"Tin_5BMGX":{ "percent_weight":0.1,"name_key":"ing_tin_5bmgx"},"Glyc":{ "percent_weight":1.13,"name_key":"ing_glyc"},"MPG":{ "percent_weight":1.5,"name_key":"ing_mpg"},"NI":{ "percent_weight":3,"name_key":"ing_ni"},"Acu_WR":{ "percent_weight":0.56,"name_key":"ing_acu_wr"},"TEA":{ "percent_weight":0.56,"name_key":"ing_tea"},"EU LAS":{ "percent_weight":6,"name_key":"ing_eu las"},"CitA":{ "percent_weight":1.13,"name_key":"ing_cita"},"FA":{ "percent_weight":0.6,"name_key":"ing_fa"},"D2066":{ "percent_weight":0.68,"name_key":"ing_d2066"},"SLES3EO EU Syn":{ "percent_weight":4,"name_key":"ing_sles3eo_eu_syn"},"CAPB":{ "percent_weight":0,"name_key":"ing_capb"},"HP 20":{ "percent_weight":2.25,"name_key":"ing_hp_20"},"UL 50":{ "percent_weight":0.6,"name_key":"ing_ul_50"},"NaCl":{ "percent_weight":1.25,"name_key":"ing_nacl"},"PGXL":{ "percent_weight":0.02,"name_key":"ing_pgxl"},"Sol_14":{ "percent_weight":1,"name_key":"ing_sol_14"},"Water_balanced":{ "percent_weight":7,"name_key":"ing_water"},"D2010":{ "percent_weight":3,"name_key":"ing_d2010"} 
+            } 
+        }, 
+        {
+            "formulation_name":"Formulation 5",
+            "formulation":
+            {
+                "Water":{"percent_weight":65.62,"name_key":"ing_water"},"Tin_5BMGX":{ "percent_weight":0.1,"name_key":"ing_tin_5bmgx"},"Glyc":{ "percent_weight":1.13,"name_key":"ing_glyc"},"MPG":{ "percent_weight":1.5,"name_key":"ing_mpg"},"NI":{ "percent_weight":3,"name_key":"ing_ni"},"Acu_WR":{ "percent_weight":0.56,"name_key":"ing_acu_wr"},"TEA":{ "percent_weight":0.56,"name_key":"ing_tea"},"EU LAS":{ "percent_weight":6,"name_key":"ing_eu las"},"CitA":{ "percent_weight":1.13,"name_key":"ing_cita"},"FA":{ "percent_weight":0.6,"name_key":"ing_fa"},"D2066":{ "percent_weight":0.68,"name_key":"ing_d2066"},"SLES3EO EU Syn":{ "percent_weight":4,"name_key":"ing_sles3eo_eu_syn"},"CAPB":{ "percent_weight":0,"name_key":"ing_capb"},"HP 20":{ "percent_weight":2.25,"name_key":"ing_hp_20"},"UL 50":{ "percent_weight":0.6,"name_key":"ing_ul_50"},"NaCl":{ "percent_weight":1.25,"name_key":"ing_nacl"},"PGXL":{ "percent_weight":0.02,"name_key":"ing_pgxl"},"Sol_14":{ "percent_weight":1,"name_key":"ing_sol_14"},"Water_balanced":{ "percent_weight":6,"name_key":"ing_water"},"D2010":{ "percent_weight":4,"name_key":"ing_d2010"} 
+            } 
+        }, 
+        {
+            "formulation_name":"Formulation 6",
+            "formulation":
+            {
+                "Water":{"percent_weight":65.62,"name_key":"ing_water"},"Tin_5BMGX":{ "percent_weight":0.1,"name_key":"ing_tin_5bmgx"},"Glyc":{ "percent_weight":1.13,"name_key":"ing_glyc"},"MPG":{ "percent_weight":1.5,"name_key":"ing_mpg"},"NI":{ "percent_weight":3,"name_key":"ing_ni"},"Acu_WR":{ "percent_weight":0.56,"name_key":"ing_acu_wr"},"TEA":{ "percent_weight":0.56,"name_key":"ing_tea"},"EU LAS":{ "percent_weight":6,"name_key":"ing_eu las"},"CitA":{ "percent_weight":1.13,"name_key":"ing_cita"},"FA":{ "percent_weight":0.6,"name_key":"ing_fa"},"D2066":{ "percent_weight":0.68,"name_key":"ing_d2066"},"SLES3EO EU Syn":{ "percent_weight":4,"name_key":"ing_sles3eo_eu_syn"},"CAPB":{ "percent_weight":0,"name_key":"ing_capb"},"HP 20":{ "percent_weight":2.25,"name_key":"ing_hp_20"},"UL 50":{ "percent_weight":0.6,"name_key":"ing_ul_50"},"NaCl":{ "percent_weight":1.25,"name_key":"ing_nacl"},"PGXL":{ "percent_weight":0.02,"name_key":"ing_pgxl"},"Sol_14":{ "percent_weight":1,"name_key":"ing_sol_14"},"Water_balanced":{ "percent_weight":5,"name_key":"ing_water"},"D2010":{ "percent_weight":5,"name_key":"ing_d2010"} 
+            } 
+        }, 
+        {
+            "formulation_name":"Formulation 7",
+            "formulation":
+            {
+                "Water":{"percent_weight":65.62,"name_key":"ing_water"},"Tin_5BMGX":{ "percent_weight":0.1,"name_key":"ing_tin_5bmgx"},"Glyc":{ "percent_weight":1.13,"name_key":"ing_glyc"},"MPG":{ "percent_weight":1.5,"name_key":"ing_mpg"},"NI":{ "percent_weight":3,"name_key":"ing_ni"},"Acu_WR":{ "percent_weight":0.56,"name_key":"ing_acu_wr"},"TEA":{ "percent_weight":0.56,"name_key":"ing_tea"},"EU LAS":{ "percent_weight":6,"name_key":"ing_eu las"},"CitA":{ "percent_weight":1.13,"name_key":"ing_cita"},"FA":{ "percent_weight":0.6,"name_key":"ing_fa"},"D2066":{ "percent_weight":0.68,"name_key":"ing_d2066"},"SLES3EO EU Syn":{ "percent_weight":4,"name_key":"ing_sles3eo_eu_syn"},"CAPB":{ "percent_weight":0,"name_key":"ing_capb"},"HP 20":{ "percent_weight":2.25,"name_key":"ing_hp_20"},"UL 50":{ "percent_weight":0.6,"name_key":"ing_ul_50"},"NaCl":{ "percent_weight":1.25,"name_key":"ing_nacl"},"PGXL":{ "percent_weight":0.02,"name_key":"ing_pgxl"},"Sol_14":{ "percent_weight":1,"name_key":"ing_sol_14"},"Water_balanced":{ "percent_weight":4,"name_key":"ing_water"},"D2010":{ "percent_weight":6,"name_key":"ing_d2010"} 
+            } 
+        }, 
+        {
+            "formulation_name":"Formulation 8",
+            "formulation":
+            {
+                "Water":{"percent_weight":65.62,"name_key":"ing_water"},"Tin_5BMGX":{ "percent_weight":0.1,"name_key":"ing_tin_5bmgx"},"Glyc":{ "percent_weight":1.13,"name_key":"ing_glyc"},"MPG":{ "percent_weight":1.5,"name_key":"ing_mpg"},"NI":{ "percent_weight":3,"name_key":"ing_ni"},"Acu_WR":{ "percent_weight":0.56,"name_key":"ing_acu_wr"},"TEA":{ "percent_weight":0.56,"name_key":"ing_tea"},"EU LAS":{ "percent_weight":6,"name_key":"ing_eu las"},"CitA":{ "percent_weight":1.13,"name_key":"ing_cita"},"FA":{ "percent_weight":0.6,"name_key":"ing_fa"},"D2066":{ "percent_weight":0.68,"name_key":"ing_d2066"},"SLES3EO EU Syn":{ "percent_weight":4,"name_key":"ing_sles3eo_eu_syn"},"CAPB":{ "percent_weight":0,"name_key":"ing_capb"},"HP 20":{ "percent_weight":2.25,"name_key":"ing_hp_20"},"UL 50":{ "percent_weight":0.6,"name_key":"ing_ul_50"},"NaCl":{ "percent_weight":1.25,"name_key":"ing_nacl"},"PGXL":{ "percent_weight":0.02,"name_key":"ing_pgxl"},"Sol_14":{ "percent_weight":1,"name_key":"ing_sol_14"},"Water_balanced":{ "percent_weight":3,"name_key":"ing_water"},"D2010":{ "percent_weight":7,"name_key":"ing_d2010"} 
+            } 
+        }, 
+        {
+            "formulation_name":"Formulation 9",
+            "formulation":
+            {
+                "Water":{"percent_weight":65.62,"name_key":"ing_water"},"Tin_5BMGX":{ "percent_weight":0.1,"name_key":"ing_tin_5bmgx"},"Glyc":{ "percent_weight":1.13,"name_key":"ing_glyc"},"MPG":{ "percent_weight":1.5,"name_key":"ing_mpg"},"NI":{ "percent_weight":3,"name_key":"ing_ni"},"Acu_WR":{ "percent_weight":0.56,"name_key":"ing_acu_wr"},"TEA":{ "percent_weight":0.56,"name_key":"ing_tea"},"EU LAS":{ "percent_weight":6,"name_key":"ing_eu las"},"CitA":{ "percent_weight":1.13,"name_key":"ing_cita"},"FA":{ "percent_weight":0.6,"name_key":"ing_fa"},"D2066":{ "percent_weight":0.68,"name_key":"ing_d2066"},"SLES3EO EU Syn":{ "percent_weight":4,"name_key":"ing_sles3eo_eu_syn"},"CAPB":{ "percent_weight":0,"name_key":"ing_capb"},"HP 20":{ "percent_weight":2.25,"name_key":"ing_hp_20"},"UL 50":{ "percent_weight":0.6,"name_key":"ing_ul_50"},"NaCl":{ "percent_weight":1.25,"name_key":"ing_nacl"},"PGXL":{ "percent_weight":0.02,"name_key":"ing_pgxl"},"Sol_14":{ "percent_weight":1,"name_key":"ing_sol_14"},"Water_balanced":{ "percent_weight":2,"name_key":"ing_water"},"D2010":{ "percent_weight":8,"name_key":"ing_d2010"} 
+            } 
+        }, 
+        {
+            "formulation_name":"Formulation 10",
+            "formulation":
+            {
+                "Water":{"percent_weight":65.62,"name_key":"ing_water"},"Tin_5BMGX":{ "percent_weight":0.1,"name_key":"ing_tin_5bmgx"},"Glyc":{ "percent_weight":1.13,"name_key":"ing_glyc"},"MPG":{ "percent_weight":1.5,"name_key":"ing_mpg"},"NI":{ "percent_weight":3,"name_key":"ing_ni"},"Acu_WR":{ "percent_weight":0.56,"name_key":"ing_acu_wr"},"TEA":{ "percent_weight":0.56,"name_key":"ing_tea"},"EU LAS":{ "percent_weight":6,"name_key":"ing_eu las"},"CitA":{ "percent_weight":1.13,"name_key":"ing_cita"},"FA":{ "percent_weight":0.6,"name_key":"ing_fa"},"D2066":{ "percent_weight":0.68,"name_key":"ing_d2066"},"SLES3EO EU Syn":{ "percent_weight":4,"name_key":"ing_sles3eo_eu_syn"},"CAPB":{ "percent_weight":0,"name_key":"ing_capb"},"HP 20":{ "percent_weight":2.25,"name_key":"ing_hp_20"},"UL 50":{ "percent_weight":0.6,"name_key":"ing_ul_50"},"NaCl":{ "percent_weight":1.25,"name_key":"ing_nacl"},"PGXL":{ "percent_weight":0.02,"name_key":"ing_pgxl"},"Sol_14":{ "percent_weight":1,"name_key":"ing_sol_14"},"Water_balanced":{ "percent_weight":1,"name_key":"ing_water"},"D2010":{ "percent_weight":9,"name_key":"ing_d2010"} 
+            } 
+        }, 
+        {
+            "formulation_name":"Formulation 11",
+            "formulation":
+            {
+                "Water":{"percent_weight":65.62,"name_key":"ing_water"},"Tin_5BMGX":{ "percent_weight":0.1,"name_key":"ing_tin_5bmgx"},"Glyc":{ "percent_weight":1.13,"name_key":"ing_glyc"},"MPG":{ "percent_weight":1.5,"name_key":"ing_mpg"},"NI":{ "percent_weight":3,"name_key":"ing_ni"},"Acu_WR":{ "percent_weight":0.56,"name_key":"ing_acu_wr"},"TEA":{ "percent_weight":0.56,"name_key":"ing_tea"},"EU LAS":{ "percent_weight":6,"name_key":"ing_eu las"},"CitA":{ "percent_weight":1.13,"name_key":"ing_cita"},"FA":{ "percent_weight":0.6,"name_key":"ing_fa"},"D2066":{ "percent_weight":0.68,"name_key":"ing_d2066"},"SLES3EO EU Syn":{ "percent_weight":4,"name_key":"ing_sles3eo_eu_syn"},"CAPB":{ "percent_weight":0,"name_key":"ing_capb"},"HP 20":{ "percent_weight":2.25,"name_key":"ing_hp_20"},"UL 50":{ "percent_weight":0.6,"name_key":"ing_ul_50"},"NaCl":{ "percent_weight":1.25,"name_key":"ing_nacl"},"PGXL":{ "percent_weight":0.02,"name_key":"ing_pgxl"},"Sol_14":{ "percent_weight":1,"name_key":"ing_sol_14"},"Water_balanced":{ "percent_weight":0,"name_key":"ing_water"},"D2010":{ "percent_weight":10,"name_key":"ing_d2010"} 
+                } 
+            } 
+        ] 
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="/">
+    <script>
+
+      if(document.location.hostname == 'localhost')
+      {
+        document.write('<base href="/">');
+      }
+      else
+      {
+        document.write('<base href="http://srv-ict-14652.scnsoft.com:9944/PNK/" >');
+      }
+    </script>
+
+    <link rel="stylesheet" href="/assets/css/handsontable.full.css">
+    <script src="/assets/lib/handsontable.full.js"></script>
+
+    <script src="/assets/lib/plotly-latest.min.js"></script>
+
+  </head>
+  <body>
+
+    <my-app>Loading....</my-app>
+  </body>
+</html>

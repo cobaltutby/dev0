@@ -1,0 +1,68 @@
+<div>
+    <h2>Process Parameters</h2>  
+
+    <div [hidden]="!experimentSetup.experimentTypes.gotData" class="form-inline">
+        <label for="process">Process:</label>
+        <select class="form-control" id="process" name="process" [(ngModel)]="state.selection.process.name" required #newprocess="ngModel">
+            <option *ngFor="let process of experimentSetup.processes">{{process.name }}</option>
+        </select>
+        <button  [disabled]="!newprocess.valid" class="btn btn-primary btn-xs" title="Add new process" (click)="design.newProcessItem()" style="margin-right: 8px;">
+            <span class="glyphicon glyphicon-plus"></span>
+        </button>
+    </div>
+
+    <table id="tree-root" class="table table-responsive">
+        <thead>
+            <tr>
+                <th>Sort</th>
+                <th></th>
+                <th width="30%">Name</th>
+                <th>Value</th>
+                <th>Unit</th>
+            </tr>
+        </thead>
+
+        <tbody dnd-sortable-container [dropZones]="['boxers-zone']" [sortableData]="experimentSetup.processData">
+            <tr *ngFor="let node of experimentSetup.processData; let i = index" class="list-group-item" dnd-sortable [sortableIndex]="i" class="node.type === 'ingredient' ? 'ingredientrow' : 'processrow'">
+                <td>
+                    <div [hidden]="!experimentSetup.experimentTypes.gotData">
+                        <i ngClass="glyphicon glyphicon-resize-vertical"></i> 
+                    </div>
+                </td>
+
+                <td>
+                    <i [ngClass]="node.type === 'ingredient' ? 'glyphicon glyphicon-tag' : 'glyphicon glyphicon-cog'"></i>
+                </td>
+
+                <td>
+                    <strong>{{node.name}}</strong> 
+                </td>
+
+                <td>
+                    <div [hidden]="!experimentSetup.experimentTypes.gotData">
+                        <input type="text" [hidden]="node.type === 'ingredient'" [(ngModel)]="experimentSetup.processData[i].parameter"/>
+                    </div>
+                </td>
+
+                <td>
+                    <p [hidden]="node.type === 'ingredient'">{{node.caption}}</p>
+                </td>
+
+                <td>
+                    <div [hidden]="!experimentSetup.experimentTypes.gotData">
+                        <button [hidden]="node.type === 'ingredient'" class="pull-right btn btn-danger btn-xs" (click)="design.removeProcessItem(node)">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button>
+                    </div>
+                </td>
+                
+            </tr>
+        </tbody>
+    </table>
+
+    <div [hidden]="!experimentSetup.experimentTypes.gotData">
+        <button [ngClass]="state.prevButtonClass()" (click)="state.prevState()">Previous</button>
+        <button [ngClass]="state.nextButtonClass()" (click)="state.nextState()">Next</button>
+    </div>
+
+</div>

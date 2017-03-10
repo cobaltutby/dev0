@@ -1,0 +1,82 @@
+<div>
+    <div>
+        <div class="pad-bottom">
+            <button type="button" class="btn btn-info" (click)="stability.printGrid()">
+                Print
+            </button>
+            <button type="button" class="btn btn-info" uib-btn-checkbox btn-checkbox-true="1" btn-checkbox-false="0">
+                Show/Hide Plots
+            </button>
+            <button type="button" class="btn btn-info" (click)="stability.loadStabilityPlots()">
+                Refresh Plots
+            </button>
+            <button type="button" class="btn btn-info" (click)="stability.saveDataToEKB()">
+                Save data
+            </button>
+            <div id="process-formulation-plot" ng-show="showPlots"></div>
+        </div>
+    </div>
+    
+    <div ng-show="changesMade"><p class="changes-warning">Please ensure you save your changes.</p></div>
+    
+    <div>
+        <label class="btn btn-warning" ng-model="executionMode" uib-btn-radio="'manual'">Manual</label>
+        <label class="btn btn-success" ng-model="executionMode" uib-btn-radio="'auto'">High Throughput</label>
+        
+        <button  class="btn btn-success" ng-show="executionMode=='auto'">Load EMS Data</button>
+        <button  class="btn btn-info">Save</button>
+        <button  class="btn btn-info"  (click)="stability.saveToNotebook()">Open Notebook</button>
+    </div>
+
+    <form class="form-inline pad-top" name="name1">
+        <label for="week">Select Test Time:</label>
+        <select class="form-control" id="week" name="week" [(ngModel)]="stability.selection.testWeek">
+            <option *ngFor="let week of stability.options.testWeeks">
+                {{week}}
+            </option>
+        </select>
+
+        <button (click)="stability.MoveDateTime(-1)" class="btn btn-info" >Back</button>
+        <button (click)="stability.MoveDateTime(1)" class="btn btn-info" >Next</button>
+        <button (click)="stability.NewTestWeek()" class="btn btn-info" >New</button>
+        <input type="number" id="newWeek" class="form-control" name="name2" [(ngModel)]="stability.newTestWeek"/>
+        <label for="newWeek">week</label>
+    </form>
+    <br/>
+    <div id="stability-grid" ></div>
+    
+    <div class="form-inline pad-top">
+        <label for="plot-type">Select plot style</label>
+        <select class="form-control" id="plot-type" [(ngModel)]="stability.plotStyle">
+            <option *ngFor="let plotStyle of stability.options.plotStyles">{{plotStyle}}
+            </option>
+        </select>
+    </div>
+    
+    <div ng-show="plotStyle=='Selected week'">
+        <div>
+            <div id="stability-plots-this-pH" class="col-sm-6" ></div>
+            <div id="stability-plots-this-visc2" class="col-sm-6"></div>
+        </div>
+        <div>
+            <div id="stability-plots-this-visc21" class="col-sm-6"></div>
+            <div id="stability-plots-this-visc106" class="col-sm-6"></div>
+        </div>
+    </div>
+    <div ng-show="plotStyle=='All weeks'">
+        <div>
+            <div id="stability-plots-all-pH" class="col-sm-6" ></div>
+            <div id="stability-plots-all-visc2" class="col-sm-6"></div>
+        </div>
+        <div>
+            <div id="stability-plots-all-visc21" class="col-sm-6"></div>
+            <div id="stability-plots-all-visc106" class="col-sm-6"></div>
+        </div>
+    </div>
+    
+    <div id="stability-plots-all"></div>
+    
+    
+    
+</div>
+

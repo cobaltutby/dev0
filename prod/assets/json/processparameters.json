@@ -1,0 +1,15 @@
+{ "parameters": 
+    [ 
+        {"name":"High Pressure Homogeniser (HPH)","caption":"Bar-gauge pressure"}, 
+        {"name":"High Shear In-line mixer/mill","caption":"rpm"}, 
+        {"name":"High Shear Mixer/dip-in mill","caption":"rpm"}, 
+        {"name":"Overhear stirrer/mixer","caption":"rpm"}, 
+        {"name":"Heating","caption":"Degrees C"}, 
+        {"name":"Cooling","caption":"Degrees C"}, 
+        {"name":"pH adjustment","caption":"pH"}, 
+        {"name":"Viscosity adjustment","caption":"mPa.s"}, 
+        {"name":"Time","caption":"minutes"}, 
+        {"name":"Split to aliquots","caption":"g per aliquot"} 
+    ] 
+}
+
