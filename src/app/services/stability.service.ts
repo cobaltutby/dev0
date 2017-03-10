@@ -26,7 +26,7 @@ export class StabilityService implements OnInit
     stabilityPlotDivThis = document.getElementById('stability-plots-this-pH');
     executionMode = 'manual';
     changesMade = false;
-
+    testevar1: string;
     newTestWeek: string;
     selectedWeek: string;
     showPlots: boolean = false;
