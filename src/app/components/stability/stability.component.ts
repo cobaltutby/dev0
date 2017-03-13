@@ -20,17 +20,18 @@ export class StabilityComponent
                 private stability:  StabilityService,
                 )
     {
-      this.state.current.name = 'stability';
       
-      //this.stability.loadStabilityPlots();
     } 
     ngOnInit()
     {
+      for (let test in this.stability.tests)
+      {
+          this.stability.tests[test]['divThis'] = document.getElementById('stability-plots-this-' + this.stability.tests[test]['div']);
+          this.stability.tests[test]['divAll'] = document.getElementById('stability-plots-all-' + this.stability.tests[test]['div']);
+      }
       this.stability.stabilityHotDiv = document.getElementById('stability-grid');
-    
       this.stability.stabilityPlotDivAll = document.getElementById('stability-plots-all');
       this.stability.stabilityPlotDivThis = document.getElementById('stability-plots-this-pH');
       this.stability.loadStabilityView();
     }
-  
 }

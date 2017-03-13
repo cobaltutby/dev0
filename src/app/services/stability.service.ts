@@ -29,6 +29,7 @@ export class StabilityService
     newTestWeek: string;
     selectedWeek: string;
     showPlots: boolean = false;
+    showPlotsState: string = 'Show Plots';
         
     tests = 
     {
@@ -48,9 +49,6 @@ export class StabilityService
     };
     
     options: StabilityOptions;
-    
-    
-
 
     constructor(
                 private app:                AppService, 
@@ -70,12 +68,7 @@ export class StabilityService
         this.selection = new StabilitySelection();
         this.options = new StabilityOptions();
 
-        for (let test in this.tests)
-            {
-                this.tests[test]['divThis'] = document.getElementById('stability-plots-this-' + this.tests[test]['div']);
-                this.tests[test]['divAll'] = document.getElementById('stability-plots-all-' + this.tests[test]['div']);
 
-            }
     }  
     getData(trialName: string)
     { 
@@ -274,7 +267,7 @@ export class StabilityService
         
         nestedHeaders.push(topRow);
         nestedHeaders.push(secondRow);
-     
+
         let thisData: string [] = [];
         let thisRowHeaders: string [] = [];
         
@@ -289,19 +282,19 @@ export class StabilityService
 
         if (typeof this.stabilityHot === 'undefined')
         {
-
             this.stabilityHot = new Handsontable(this.stabilityHotDiv, {
-                data: thisData,
-                colHeaders: thisColHeaders,
-                nestedHeaders: nestedHeaders,
-                rowHeaders: thisRowHeaders,
-                colWidths: thisColWidths,
+                data:           thisData,
+                colHeaders:     thisColHeaders,
+                nestedHeaders:  nestedHeaders,
+                rowHeaders:     thisRowHeaders,
+                colWidths:      thisColWidths,
                 rowHeaderWidth: 120,
-                afterChange: (changes: any, source: any) => 
+                afterChange:    (changes: any, source: any) => 
                 {
                     if (source !== "loadData") 
                     {
                         this.loadStabilityPlots();
+                         this.changesMade = true;
                     }
                 },
                 cells: (row: any, col: any, prop: any) =>
@@ -321,13 +314,14 @@ export class StabilityService
         }
         else
         {
-            this.stabilityHot.updateSettings({
+                this.stabilityHot.updateSettings({
                 //colHeaders: thisColHeaders,
                 nestedHeaders: nestedHeaders,
                 data: thisData,
                 columns: thisColumns
             });
         }
+        this.loadStabilityPlots();
     }
     loadStabilityPlots()
     {
@@ -335,22 +329,23 @@ export class StabilityService
         {
             return;
         }
-        let thisWeekPHData: any [];
-        let thisWeekViscosity2Data: any [];
-        let thisWeekViscosity21Data: any [];
-        let thisWeekViscosity106Data: any [];
+        let thisWeekPHData: any [] = [];
+        let thisWeekViscosity2Data: any [] = [];
+        let thisWeekViscosity21Data: any [] = [];
+        let thisWeekViscosity106Data: any [] = [];
         
-        let thisWeekData: any [];
+        let thisWeekData: any [] = [];
          
         for (let week in this.stabilityData.data.samples)
         {
             for (let test in this.tests)
             {
-                let tmpData1: any [];
+                let tmpData1: any [] = [];
                 
                 for (let sample in this.stabilityData.data.samples[week])
                 {
                     let vals: ThisWeekPlotData;
+                    
                     vals = this.getThisWeekPlotData(this.selection.testWeek, test, sample);
 
                     if (typeof vals !== 'undefined')
@@ -371,10 +366,12 @@ export class StabilityService
             }
         }
         
-        let allWeekData = {};
+        let allWeekData: any [] = [];
+
         for (let test in this.tests)
         {
             let layout: Layout;
+            layout = new Layout();
             layout.title =  this.tests[test]['title'];
             layout.height = 500;
             layout.width = 800;
@@ -390,6 +387,7 @@ export class StabilityService
             
             if (this.plotStyle === "Selected week")
             {
+                console.log('Selected week');
                 layout.xaxis = {title: 'Storage temperature'};
                 
                 Plotly.newPlot(
@@ -406,6 +404,7 @@ export class StabilityService
             
             if (this.plotStyle === "All weeks")
             {
+                console.log('All weeks');
                 layout.xaxis = {title: 'Test week'};
                 
                 Plotly.newPlot(
@@ -418,7 +417,7 @@ export class StabilityService
                         doubleClick: 'reset+autosize'
                     }
                 );
-
+                console.log('bye');
             }
         }
     }
@@ -426,21 +425,21 @@ export class StabilityService
     {
         let fullTestName = this.tests[testName]['title'];
         let ret: ThisWeekPlotData;
+        ret = new ThisWeekPlotData();
+        let data: any [] = [];
         
-        let data: any [];
-        
-        let x: string [];
-        let y: string [];
+        let x: string [] = [];
+        let y: string [] = [];
         
         if (typeof this.stabilityData.enteredData["Week" + selectedWeek] === 'undefined') return;
         if (typeof this.stabilityData.enteredData["Week" + selectedWeek][fullTestName] === 'undefined') return;
 
         for (let propt in this.stabilityData.enteredData["Week" + selectedWeek][fullTestName])
         {
-
             if (propt.lastIndexOf(sampleName) === 0)
             {
                 let thisData: StabilityThisData;
+                thisData = new StabilityThisData();
            
                 thisData.x = propt.substring(propt.lastIndexOf("=") + 1);
                 
@@ -453,7 +452,7 @@ export class StabilityService
                 data.push(thisData);
             }
         }
-        
+
         data.sort(function(a: StabilityThisData, b:StabilityThisData)
         {
             if (+a.x > +b.x) {
@@ -469,13 +468,13 @@ export class StabilityService
         
         for (let Data in data)
         {
+            
             x.push(data[Data]['x']);
             y.push(data[Data]['y']);
         }
-        
-        ret['x'] = x;
-        ret['y'] = y;
-        
+        ret.x = x;
+        ret.y = y;
+
         return ret; 
     }
     MoveDateTime(incdec: number)
@@ -614,6 +613,32 @@ export class StabilityService
                         error => console.log(error)
                         );
     };  
+    changeMode()
+    {
+        console.log('changeMode');
+        if(this.executionMode == 'manual')
+        {
+            this.executionMode = 'auto';
+        }
+        else
+        {
+            this.executionMode = 'manual';
+        }
+    }
+    showhidePlots()
+    {
+        console.log('showhidePlots');
+        this.showPlots = !this.showPlots;
+        if (this.showPlots)
+        {
+            this.showPlotsState = 'Hide Plots';
+        }
+        else
+        {
+            this.showPlotsState = 'Show Plots';
+        }
+
+    }
 }
    
 

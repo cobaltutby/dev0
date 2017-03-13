@@ -4,8 +4,8 @@
             <button type="button" class="btn btn-info" (click)="stability.printGrid()">
                 Print
             </button>
-            <button type="button" class="btn btn-info" uib-btn-checkbox btn-checkbox-true="1" btn-checkbox-false="0">
-                Show/Hide Plots
+            <button type="button" class="btn btn-info" (click)="stability.showhidePlots()">
+                {{stability.showPlotsState}}
             </button>
             <button type="button" class="btn btn-info" (click)="stability.loadStabilityPlots()">
                 Refresh Plots
@@ -13,17 +13,17 @@
             <button type="button" class="btn btn-info" (click)="stability.saveDataToEKB()">
                 Save data
             </button>
-            <div id="process-formulation-plot" ng-show="showPlots"></div>
+            <div id="process-formulation-plot"></div>
         </div>
     </div>
     
-    <div ng-show="changesMade"><p class="changes-warning">Please ensure you save your changes.</p></div>
+    <div [hidden]="!stability.changesMade"><p class="changes-warning">Please ensure you save your changes.</p></div>
     
     <div>
-        <label class="btn btn-warning" ng-model="executionMode" uib-btn-radio="'manual'">Manual</label>
-        <label class="btn btn-success" ng-model="executionMode" uib-btn-radio="'auto'">High Throughput</label>
+        <button class="btn btn-warning" *ngIf="stability.executionMode == 'manual'" (click)="stability.changeMode()">Manual</button>
+        <button class="btn btn-success" *ngIf="stability.executionMode == 'auto'" (click)="stability.changeMode()">High Throughput</button>
         
-        <button  class="btn btn-success" ng-show="executionMode=='auto'">Load EMS Data</button>
+        <button  class="btn btn-success" *ngIf="stability.executionMode == 'auto'">Load EMS Data</button>
         <button  class="btn btn-info">Save</button>
         <button  class="btn btn-info"  (click)="stability.saveToNotebook()">Open Notebook</button>
     </div>
@@ -47,35 +47,35 @@
     
     <div class="form-inline pad-top">
         <label for="plot-type">Select plot style</label>
-        <select class="form-control" id="plot-type" [(ngModel)]="stability.plotStyle">
+        <select class="form-control" id="plot-type" [(ngModel)]="stability.plotStyle" (change)="stability.loadStabilityPlots()">
             <option *ngFor="let plotStyle of stability.options.plotStyles">{{plotStyle}}
             </option>
         </select>
     </div>
-    
-    <div ng-show="plotStyle=='Selected week'">
-        <div>
-            <div id="stability-plots-this-pH" class="col-sm-6" ></div>
-            <div id="stability-plots-this-visc2" class="col-sm-6"></div>
+    <div [hidden]="!stability.showPlots">
+        <div [hidden]="stability.plotStyle!='Selected week'">
+            <div>
+                <div id="stability-plots-this-pH" class="col-sm-6" ></div>
+                <div id="stability-plots-this-visc2" class="col-sm-6"></div>
+            </div>
+            <div>
+                <div id="stability-plots-this-visc21" class="col-sm-6"></div>
+                <div id="stability-plots-this-visc106" class="col-sm-6"></div>
+            </div>
         </div>
-        <div>
-            <div id="stability-plots-this-visc21" class="col-sm-6"></div>
-            <div id="stability-plots-this-visc106" class="col-sm-6"></div>
+        <div [hidden]="stability.plotStyle!='All weeks'">
+            <div>
+                <div id="stability-plots-all-pH" class="col-sm-6" ></div>
+                <div id="stability-plots-all-visc2" class="col-sm-6"></div>
+            </div>
+            <div>
+                <div id="stability-plots-all-visc21" class="col-sm-6"></div>
+                <div id="stability-plots-all-visc106" class="col-sm-6"></div>
+            </div>
         </div>
-    </div>
-    <div ng-show="plotStyle=='All weeks'">
-        <div>
-            <div id="stability-plots-all-pH" class="col-sm-6" ></div>
-            <div id="stability-plots-all-visc2" class="col-sm-6"></div>
-        </div>
-        <div>
-            <div id="stability-plots-all-visc21" class="col-sm-6"></div>
-            <div id="stability-plots-all-visc106" class="col-sm-6"></div>
-        </div>
-    </div>
-    
-    <div id="stability-plots-all"></div>
-    
+        
+        <div id="stability-plots-all"></div>
+      </div>  
     
     
 </div>
