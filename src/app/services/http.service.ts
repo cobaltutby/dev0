@@ -6,10 +6,6 @@ import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
 
 
-import { username, password }       from '../types/auth';
-
-
-
 @Injectable()
 export class HTTPService 
 {

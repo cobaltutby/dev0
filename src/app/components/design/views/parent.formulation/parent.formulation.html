@@ -1,13 +1,10 @@
 <button (click)="info()"> Drop  {{designData.parentFormulation.gotData}} </button>    
 
 
-<!--<div fileDrop
-  [ngClass]="{'file-is-over': fileIsOver}"
-  [options]="options"
-  (fileOver)="fileOver($event)"
-  (onFileDrop)="uploadThenRunProtocol($event)">
+<div class="drop-box well" 
+  on-drop="$event.stopPropagation(); $event.preventDefault(); uploadThenRunProtocol($event)">
   Drop file here<br><br><br>
-</div>-->
+</div>
 
 <div id="parentFormulationHOT" [hidden]="!designData.parentFormulation.gotData"></div>
 

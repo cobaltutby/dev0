@@ -64,7 +64,7 @@ import { DesignService }            from './services/design.service';
                   DndModule.forRoot(), 
   
                   //files
-                  //FileDropModule, 
+                  FileDropModule, 
                   
                 ],
   declarations: [ 

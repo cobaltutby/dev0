@@ -11,7 +11,7 @@ import { ParentFormulationData }    from '../../../../types/types';
 
 
 @Component({
-    moduleId:     'module.id',
+    //moduleId:     'module.id',
   selector:     'my-parentformulation',
   templateUrl:  './parent.formulation.html',
 })
@@ -39,9 +39,77 @@ export class ParentFormulationComponent implements OnInit
     }
 
     uploadThenRunProtocol(file: any) 
+    {   
+        // let file = $event.file;
+        // if (file[0].type === 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet') {
+        //     file[0] = file[0].slice(0, file[0].size, "application/x-zip-compressed")
+        // }
+        
+        this.upload(file);
+    };
+    upload(file: any)
     {
-        console.dir(file);
+  let xhr  = new XMLHttpRequest();
+        xhr.withCredentials = true;
+        let formData = new FormData();
+        formData.append('files', file, file.name);
+
+        xhr.onload = () => {
+            let headers = this.parseHeaders(xhr.getAllResponseHeaders());
+            let response = this.parseResponse(headers['Content-Type'], xhr.response);
+            if(this.isSuccessStatus(xhr.status)) {
+                //TO DO
+            } else {
+                console.log("error");
+                console.log(response);
+                //return;
+            }
+
+            //this.onCompleteUpload(item, response, xhr.status, headers);
+        };
+        xhr.upload.onprogress = (event) => {
+            let progress = Math.round(event.loaded / event.total * 100);
+
+            console.log(progress);
+        };
+        xhr.onloadend = () => {
+            let headers = this.parseHeaders(xhr.getAllResponseHeaders());
+            let response = this.parseResponse(headers['Content-Type'], xhr.response);
+            this.loadParentFormulation(response.data.value);
+            //this.onCompleteUpload(item, response, xhr.status, headers);
+        };
+        xhr.open('POST', 'https://srv-ict-14652.scnsoft.com:9943/jobs/?%24format=json', true);
+        xhr.send(formData);
+    
     }
+     private isSuccessStatus(status: number) {
+        return (status >= 200 && status < 300) || status === 304;
+    }
+
+    private parseHeaders(headers: string) {
+        let dict = {};
+        let lines = headers.split('\n');
+        for (let i = 0; i < lines.length; i++) {
+            let entry = lines[i].split(': ');
+            if(entry.length > 1) {
+                dict[entry[0]] = entry[1];
+            }
+        }
+        return dict;
+    }
+
+    private parseResponse(contentType: string, response: string):any {
+        let parsed = response;
+        if(contentType && contentType.indexOf('application/json') === 0) {
+            try {
+                parsed = JSON.parse(response);
+            } catch(e) {
+            }
+        }
+        return parsed;
+    }
+
+    
 
     public fileOver(fileIsOver: boolean) 
     {
