@@ -72,19 +72,19 @@ export class StabilityService
     }  
     getData(trialName: string)
     { 
-        let params = {TrialName:trialName};
-        this.ppService.runProtocolGet(this.configService.stabilityProtocol,params)
-            .subscribe( 
-                newdata =>
-                {
-                    let data = newdata;
-                    this.data = data;
-                    this.gotData = true;
-                }, 
-                error =>
-                {
-                    console.log(error);
-                }); 
+        // let params = {TrialName:trialName};
+        // this.ppService.runProtocolGet(this.configService.stabilityProtocol,params)
+        //     .subscribe( 
+        //         newdata =>
+        //         {
+        //             let data = newdata;
+        //             this.data = data;
+        //             this.gotData = true;
+        //         }, 
+        //         error =>
+        //         {
+        //             console.log(error);
+        //         }); 
     }
     loadStabilityView()
     {
@@ -94,7 +94,7 @@ export class StabilityService
         }
         else
         {
-            let params = {TrialName:this.stateParams.trialname};
+            let params = {TrialName:this.app.selection.trial_name};
             this.ppService.runProtocolGetStabilityView(this.configService.stabilitySetupProtocol,params)
                 .then( newdata => 
                     {  
@@ -522,18 +522,18 @@ export class StabilityService
         }
         else
         {
-            let  params: StabilityParams;
-            params.TrialName = this.stateParams.trialname;
-            params.newTestWeek = newWeek;
+            // let  params: StabilityParams;
+            // params.TrialName = this.app.selection.trial_name;
+            // params.newTestWeek = newWeek;
             
-            this.ppService.runProtocolGet(this.configService.newTestWeek, params)
-                .subscribe( 
-                    newdata =>
-                        {
-                            this.stabilityData.gotData = false;
-                            this.loadStabilityView();
-                        }, 
-                    error => {});
+            // this.ppService.runProtocolGet(this.configService.newTestWeek, params)
+            //     .subscribe( 
+            //         newdata =>
+            //             {
+            //                 this.stabilityData.gotData = false;
+            //                 this.loadStabilityView();
+            //             }, 
+            //         error => {});
         }
     }
     printGrid()
@@ -600,7 +600,7 @@ export class StabilityService
     }
     saveDataToEKB()
     {
-        let params = {TrialName: this.stateParams.trialname, _bodyParam:"FormData"};
+        let params = {TrialName: this.app.selection.trial_name, _bodyParam:"FormData"};
         let data = this.stabilityData.enteredData;
         
         if (typeof data === 'undefined' || data === null)

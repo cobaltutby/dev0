@@ -10,8 +10,7 @@ if (process.env.ENV === 'production') {
  else
  {
    document.write('<title>Local App</title>');
-   var url = require("file-loader?emmitFile=true!./myfile.html")
-   console.log(url);
+
  }
 
 platformBrowserDynamic().bootstrapModule(AppModule);

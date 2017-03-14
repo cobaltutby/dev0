@@ -3,8 +3,8 @@ import { Injectable }               from '@angular/core';
 @Injectable()
 export class ConfigService
 {
-    controlPanelProtocol                ='LabAutomation/ControlPanel';
-    experimentCreationProtocol          = 'LabAutomation/CreateExperiment';
+    controlPanelProtocol                = 'LabAutomation/LaundryLiquids/Design/ControlPanel';
+    experimentCreationProtocol          = 'LabAutomation/LaundryLiquids/Design/CreateExperiment';
     experimentTypesProtocol             = 'LabAutomation/LaundryLiquids/Design/ExperimentTypes';
     //parentFormulationProtocol         = 'LabAutomation/LaundryLiquids/Design/ParentFormulation';
     parentFormulationProtocol           = 'LabAutomation/LaundryLiquids/Design/ParentFormulationFromExcel';
@@ -22,7 +22,7 @@ export class ConfigService
     saveStabilityToExperimentProtocol   = 'LabAutomation/LaundryLiquids/Stability/StabOutput';
     getEnteredStabilityDaya             = 'LabAutomation/LaundryLiquids/Stability/StabOutputToJSON';
     pdfBatchSheet                       = 'LabAutomation/LaundryLiquids/Formulation/GeneratePDFBatchSheet';
-    designProtocol                      = 'LabAutomation/FormulationDesign';
+    designProtocol                      = 'LabAutomation/LaundryLiquids/Design/FormulationDesign';
     //Not built yet
     formulationProtocol                 = 'LabAutomation/FormulationResults';
     stabilityProtocol                   = 'LabAutomation/StabilityData';

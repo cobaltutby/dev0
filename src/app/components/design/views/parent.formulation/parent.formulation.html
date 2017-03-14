@@ -1,9 +1,8 @@
-<button (click)="info()"> Drop  {{designData.parentFormulation.gotData}} </button>    
-
-
-<div class="drop-box well" 
-  on-drop="$event.stopPropagation(); $event.preventDefault(); uploadThenRunProtocol($event)">
-  Drop file here<br><br><br>
+<div  class="drop-box well" 
+      on-dragenter="$event.stopPropagation(); $event.preventDefault();"                   
+      on-dragover="$event.stopPropagation(); $event.preventDefault();"                    
+      on-drop="$event.stopPropagation(); $event.preventDefault(); uploadThenRunProtocol($event);">
+      Drop file here<br><br><br>
 </div>
 
 <div id="parentFormulationHOT" [hidden]="!designData.parentFormulation.gotData"></div>

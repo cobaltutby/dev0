@@ -42,7 +42,7 @@ import { Router }               from '@angular/router'
 import { DndModule }            from 'ng2-dnd';
 
 //files
-import { FileDropModule }       from 'angular2-file-drop';
+//import { FileDropModule }       from 'angular2-file-drop';
 
 import { StateService }             from './services/state.service';
 import { StateParamsService }       from './services/stateparams.service';
@@ -64,7 +64,7 @@ import { DesignService }            from './services/design.service';
                   DndModule.forRoot(), 
   
                   //files
-                  FileDropModule, 
+                  //FileDropModule, 
                   
                 ],
   declarations: [ 

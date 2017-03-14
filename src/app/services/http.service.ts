@@ -1,5 +1,5 @@
 import { Injectable }               from '@angular/core';
-import { Http, Response, Headers }  from '@angular/http';
+import { Http, Response, Headers, RequestOptions, URLSearchParams  }  from '@angular/http';
 
 import { Observable }               from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
@@ -22,11 +22,17 @@ export class HTTPService
   {
   }
 
-  runProtocolGet (protocolPath: string, params?: {}): Observable<any[]> 
+  runProtocolGet (protocolPath: string, params?: {}): Observable<any> 
   {
-    console.log('runProtocolGet');
-    //return this.http.get('https://' + this.ppServer + ':' + this.sslPort + '/protocols/' + protocolPath, { headers: headers } )
-    return this.http.get('assets/json/ControlPanel.json')
+    console.dir(params);
+    let path = 'http://' + this.ppServer + ':' + this.port + '/protocols/' + protocolPath;
+    let search: URLSearchParams = new URLSearchParams();
+    for(let p in params)
+    {
+       search.set(p, params[p]);
+    }
+    
+    return this.http.get(path, {search: search})
                     .map(this.extract)
                     .catch(this.handleError);
   }
@@ -123,8 +129,16 @@ export class HTTPService
   runProtocolPost (protocolPath: string, params?: {}, data?: {}): Observable<any> 
   {
     console.log('runProtocolPost');
-    return this.http.get('https://' + this.ppServer + ':' + this.sslPort + '/auth/launchjob?_protocol=Protocols/' + protocolPath
-    //{ headers: headers } 
+    console.log('data');
+    console.dir(data);
+    console.log('params');
+    console.dir(params);
+    let search: URLSearchParams = new URLSearchParams();
+    for(let p in params)
+    {
+       search.set(p, params[p]);
+    }
+    return this.http.post('http://' + this.ppServer + ':' + this.port + '/auth/launchjob?_protocol=Protocols/' + protocolPath, data, {search: search}
     )
                     .map(this.extract)
                     .catch(this.handleError);
@@ -132,7 +146,7 @@ export class HTTPService
   runProtocolPost1 (protocolPath: string, params?: {}, data?: {}): Observable<any> 
   {
     console.log('runProtocolPost1');
-    return this.http.get('publicPath/allformulations.json')
+    return this.http.get('assets/json/allformulations.json')
                     .map(this.extract)
                     .catch(this.handleError);
   }
@@ -150,19 +164,11 @@ export class HTTPService
       let body = res.json();
       console.dir(body);
       return body || { };
-
-      //string implementation
-      //let data: string = res['_body'] || '';
-      //return data || '';
   }
     private extract2(res: Response) {
 
       let body = res.json();
       return body || { };
-
-      //string implementation
-      //let data: string = res['_body'] || '';
-      //return data || '';
   }
   private extractData(res: Response) {
 
@@ -189,38 +195,19 @@ export class HTTPService
                     .map(this.extract)
                     .catch(this.handleError);
     };
+  fileUpload(file: File)
+  {
+    let formData:FormData = new FormData();
+    formData.append('uploadFile', file, file.name);
+
+    return this.http.post('http://'+ this.ppServer+ ':' + this.port + '/jobs/', formData)
+        .map(
+          res => 
+              {
+                let data = res.json();
+                return data;
+              })
+        .catch(error => Observable.throw(error))
+
+  }
 }
-  //  fileChange($event:any) 
-  //   {
-  //   let fileList: FileList = $event.target.files;
-  //     if(fileList.length > 0) 
-  //     {
-  //         let file: File = fileList[0];
-  //         let formData:FormData = new FormData();
-  //         formData.append('uploadFile', file, file.name);
-  //         let headers = new Headers();
-
-
-         
-  //         headers.append("Authorization", "Basic " + btoa(username + ":" + password)); 
-  //         headers.append('Content-Type', 'multipart/form-data');
-  //         headers.append('Accept', 'application/json');
-  //         let data: any;
-  //         let options = new RequestOptions({ headers: headers });
-  //         this.http.post('http://srv-ict-14652.scnsoft.com:9944/jobs/', formData, options)
-  //             .map(res => {res.json(); console.log('map.response')})
-  //             .catch(error => Observable.throw(error))
-  //             .subscribe(
-  //                 data => {data = data; console.log('success')},
-  //                 error => {
-  //                             console.log('object');
-  //                             console.dir(error);
-  //                             console.log('end_object'); 
-  //                             let body = error['_body'];
-  //                             console.log(body);
-  //                             let mydiv = document.getElementById('mylogin');
-  //                             mydiv.innerHTML = body;
-  //                          }
-  //             )
-  //     }
-  //   }

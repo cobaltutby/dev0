@@ -144,16 +144,18 @@ export class AppService
     loadTrialData()
     {   
         
-        //this.ppService.runProtocolGet(this.configService.controlPanelProtocol)
-        this.ppService.runProtocolGet0('LabAutomation/LaundryLiquids/design/ControlPanel')
+        console.log('loadTrialData');
+        this.ppService.runProtocolGet(this.configService.controlPanelProtocol)
           .subscribe(
             newdata =>
-                {
+                {   
+                    console.log('newdata');
+                    console.dir(newdata);
                     let data = <CPanelData[]>newdata;
                     this.CPanelData = data;
-                    if (this.stateParams.trialname != null)
+                    if (this.selection.trial_name != null)
                     {    
-                        this.setSelection(this.stateParams.trialname);
+                        this.setSelection(this.selection.trial_name);
                         this.loadTrial();
                     } 
             // else if (this.localStorage.selection != null)
@@ -164,12 +166,12 @@ export class AppService
             // } 
                     else 
                     {
-                        this.setSelection(this.stateParams.trialname);
+                        this.setSelection(this.selection.trial_name);
                         this.loadTrial();
                     }
    
             this.showHeader = !this.inIframe();
-            this.experimentName = this.stateParams.trialname;
+            this.experimentName = this.selection.trial_name
             
         }, error => {
             window.location.replace('https://'+this.ppService.ppServer+ ':'+ this.ppService.sslPort+'/platform/authorize?state=lalogin&redirect_uri='+ window.location.href);

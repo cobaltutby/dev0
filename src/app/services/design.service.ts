@@ -62,9 +62,9 @@ export class DesignService
     
     loadExperimentTypes()
     {
-        let params = {TrialName: this.stateParams.trialname};
+        let params = {TrialName: this.app.selection.trial_name};
         
-            this.ppService.runProtocolGet2(this.configService.experimentTypesProtocol,params)
+            this.ppService.runProtocolGet(this.configService.experimentTypesProtocol,params)
             .subscribe(
                 newdata => {    
                                 let data: ExperimentTypeData = <ExperimentTypeData>newdata;
@@ -76,9 +76,9 @@ export class DesignService
     };
     loadProcessParameters()
     {
-        let params = {TrialName:this.stateParams.trialname};
+        let params = {TrialName:this.app.selection.trial_name};
         
-        this.ppService.runProtocolGet3(this.configService.processParametersProtocol, params)
+        this.ppService.runProtocolGet(this.configService.processParametersProtocol, params)
         .subscribe(
             newdata => {    
                             let data: Process [] = newdata.parameters;
@@ -89,8 +89,8 @@ export class DesignService
     };
     loadDefaultTestSchedule()
     {
-        let params = {TrialName:this.stateParams.trialname};
-        this.ppService.runProtocolGet6(this.configService.testScheduleProtocol, params)
+        let params = {TrialName:this.app.selection.trial_name};
+        this.ppService.runProtocolGet(this.configService.testScheduleProtocol, params)
         .subscribe(
             newdata => {
                             let data: TestSchedule = newdata;
@@ -101,9 +101,9 @@ export class DesignService
     };
     loadAvailableTests()
     {
-        let params = {TrialName:this.stateParams.trialname};
+        let params = {TrialName:this.app.selection.trial_name};
         
-        this.ppService.runProtocolGet4(this.configService.availableTestsProtocol, params)
+        this.ppService.runProtocolGet(this.configService.availableTestsProtocol, params)
         .subscribe(
             newdata => {
                             let data: AvailableTests = newdata;
@@ -115,7 +115,7 @@ export class DesignService
     
     loadExistingExperiment()
     {
-          let params = {TrialName:this.stateParams.trialname};
+          let params = {TrialName:this.app.selection.trial_name};
         
             this.ppService.runProtocolGet5(this.configService.experiment2JSON, params)
             .subscribe(
@@ -154,7 +154,7 @@ export class DesignService
         var calculatedFormulations = this.experimentSetup.calculatedFormulations;        
         this.experimentSetup.calculatedFormulations.data = calculatedFormulations.data;
         
-        var params = {TrialName:this.stateParams.trialname, _bodyParam:"FormData"};
+        var params = {TrialName:this.app.selection.trial_name, _bodyParam:"FormData"};
         var data = this.experimentSetup;
         
         // this.ppService.runProtocolPost(this.configService.saveToExperimentProtocol, params, data)
@@ -314,10 +314,10 @@ export class DesignService
     submitExpTypeForm()
     {
         console.log('submitExpTypeForm');
-        let params = {TrialName:this.stateParams.trialname, _bodyParam:"FormData"};
+        let params = {TrialName:this.app.selection.trial_name, _bodyParam:"FormData"};
         let data = this.experimentSetup;
         
-        this.ppService.runProtocolPost1(this.configService.calculateAllFormulationsProtocol, params, data)
+        this.ppService.runProtocolPost(this.configService.calculateAllFormulationsProtocol, params, data)
             .subscribe( newdata => 
                 {
                     let data: CalculatedFormulation [] = newdata.formulation;
@@ -344,9 +344,9 @@ export class DesignService
     findFlowMaterial(name: string, id: number)
     {
 
-        var params = {TrialName:this.stateParams.trialname, FlowMaterialName: name, FlowMaterialID: id};
+        var params = {TrialName:this.app.selection.trial_name, FlowMaterialName: name, FlowMaterialID: id};
         
-        this.ppService.runProtocolGet5(this.configService.findFlowMaterial, params)
+        this.ppService.runProtocolGet(this.configService.findFlowMaterial, params)
         .subscribe(
             newdata => { 
                             let data: FlowMaterial;

@@ -160,7 +160,7 @@ export class FormulationService
             this.setupView();        
         }
         else{
-            let params = {TrialName:this.stateParams.trialname};
+            let params = {TrialName:this.app.selection.trial_name};
            
             this.ppService.runProtocolGet7(this.configService.formulationDataProtocol,params)
             .subscribe( newdata => 
@@ -279,7 +279,7 @@ export class FormulationService
     {
         let data = this.formulationData.data.processData;
         
-        let params = {TrialName: this.stateParams.trialname, _bodyParam:"FormData"};
+        let params = {TrialName: this.app.selection.trial_name, _bodyParam:"FormData"};
         
         this.ppService.runProtocolPost1(this.configService.saveFormulationData, params, data)
         .map((response: any): any => 
@@ -326,7 +326,7 @@ export class FormulationService
 
     getPDF()
     {
-        var params = {TrialName: this.stateParams.trialname, _bodyParam:"FormData"};
+        var params = {TrialName: this.app.selection.trial_name, _bodyParam:"FormData"};
         
         var data = this.formulationData;
         
