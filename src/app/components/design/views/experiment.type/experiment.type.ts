@@ -26,16 +26,16 @@ export class ExperimentType
 
     changeType()
     {
-      for(let t of this.experimentSetup.experimentTypes.data.experimentTypes)
+      for(let t of this.experimentSetup.experimentType.data.experimentType)
       {
         if(t.Type[0] === this.type)
         {
-          this.experimentSetup.experimentTypes.selected.Type = t.Type;
-          this.experimentSetup.experimentTypes.selected.number = t.number;
-          this.experimentSetup.experimentTypes.selected.list = t.list;
-          this.experimentSetup.experimentTypes.selected.ing = t.ing;
+          this.experimentSetup.experimentType.selected.Type = t.Type;
+          this.experimentSetup.experimentType.selected.number = t.number;
+          this.experimentSetup.experimentType.selected.list = t.list;
+          this.experimentSetup.experimentType.selected.ing = t.ing;
         }
       }
-        this.experimentSetup.experimentTypes.selected.gotData = true;
+        this.experimentSetup.experimentType.selected.gotData = true;
     }
 }

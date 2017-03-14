@@ -3,32 +3,32 @@
 
        <!-- [show]="experimentSetup.experimentType.gotData()"-->
          <div >
-            <form class="form" *ngIf = "designData.experimentTypes.gotData">
+            <form class="form" *ngIf = "designData.experimentType.gotData">
             <select class="form-control" 
                     name="Experiment type" 
-                    id="ExperimentTypeSelect" 
+                    id="experimentTypeelect" 
                     required [(ngModel)]="type" 
                     (change)="changeType()">
                 
-                <option *ngFor="let i of experimentSetup.experimentTypes.data.experimentTypes">{{i.Type}}</option>
+                <option *ngFor="let i of experimentSetup.experimentType.data.experimentType">{{i.Type}}</option>
             </select>
             </form>
             <div >
-                <div *ngFor="let sellist of experimentSetup.experimentTypes.selected.list">{{sellist}}<br/>
+                <div *ngFor="let sellist of experimentSetup.experimentType.selected.list">{{sellist}}<br/>
 
                     <select multiple class="form-control" 
                             [name]="sellist" 
-                            [(ngModel)]="experimentSetup.experimentTypes.selected[list]">
+                            [(ngModel)]="experimentSetup.experimentType.selected[list]">
 
                         <option *ngFor="let PF of experimentSetup.parentFormulation.data.formulation">{{PF.name}}</option>
 
                     </select>
 
                 </div>
-                <div *ngFor="let ing of experimentSetup.experimentTypes.selected.ing">{{ing}}<br/>
+                <div *ngFor="let ing of experimentSetup.experimentType.selected.ing">{{ing}}<br/>
 
                     <select class="form-control" 
-                            [(ngModel)]="experimentSetup.experimentTypes.selected[ing]" 
+                            [(ngModel)]="experimentSetup.experimentType.selected[ing]" 
                             [name]="ing">
 
                         <option *ngFor="let PF1 of experimentSetup.parentFormulation.data.formulation" [value]="PF1.name">{{PF1.name}}</option>
@@ -37,8 +37,8 @@
                 </div>
 
         <!--lower, Upper limits and Increment -->
-                <div *ngFor="let num of experimentSetup.experimentTypes.selected.number">{{num}}<br/>
-                    <input type="number" [(ngModel)]="experimentSetup.experimentTypes.selected[num]" [name]="num" step="0.01">
+                <div *ngFor="let num of experimentSetup.experimentType.selected.number">{{num}}<br/>
+                    <input type="number" [(ngModel)]="experimentSetup.experimentType.selected[num]" [name]="num" step="0.01">
                 </div>
             </div>
         </div>

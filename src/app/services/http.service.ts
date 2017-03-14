@@ -60,7 +60,7 @@ export class HTTPService
   runProtocolGet2 (protocolPath: string, params?: {}): Observable<any> 
   {
     console.log('runProtocolGet2');
-    return this.http.get('assets/json/experimenttypes.json')
+    return this.http.get('assets/json/experimentType.json')
                     .map(this.extract)
                     .catch(this.handleError);
   }

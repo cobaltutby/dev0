@@ -1,7 +1,7 @@
 <div>
     <h2>Process Parameters</h2>  
 
-    <div [hidden]="!experimentSetup.experimentTypes.gotData" class="form-inline">
+    <div [hidden]="!experimentSetup.experimentType.gotData" class="form-inline">
         <label for="process">Process:</label>
         <select class="form-control" id="process" name="process" [(ngModel)]="state.selection.process.name" required #newprocess="ngModel">
             <option *ngFor="let process of experimentSetup.processes">{{process.name }}</option>
@@ -25,7 +25,7 @@
         <tbody dnd-sortable-container [dropZones]="['boxers-zone']" [sortableData]="experimentSetup.processData">
             <tr *ngFor="let node of experimentSetup.processData; let i = index" class="list-group-item" dnd-sortable [sortableIndex]="i" class="node.type === 'ingredient' ? 'ingredientrow' : 'processrow'">
                 <td>
-                    <div [hidden]="!experimentSetup.experimentTypes.gotData">
+                    <div [hidden]="!experimentSetup.experimentType.gotData">
                         <i ngClass="glyphicon glyphicon-resize-vertical"></i> 
                     </div>
                 </td>
@@ -39,7 +39,7 @@
                 </td>
 
                 <td>
-                    <div [hidden]="!experimentSetup.experimentTypes.gotData">
+                    <div [hidden]="!experimentSetup.experimentType.gotData">
                         <input type="text" [hidden]="node.type === 'ingredient'" [(ngModel)]="experimentSetup.processData[i].parameter"/>
                     </div>
                 </td>
@@ -49,7 +49,7 @@
                 </td>
 
                 <td>
-                    <div [hidden]="!experimentSetup.experimentTypes.gotData">
+                    <div [hidden]="!experimentSetup.experimentType.gotData">
                         <button [hidden]="node.type === 'ingredient'" class="pull-right btn btn-danger btn-xs" (click)="design.removeProcessItem(node)">
                             <span class="glyphicon glyphicon-remove"></span>
                         </button>
@@ -60,7 +60,7 @@
         </tbody>
     </table>
 
-    <div [hidden]="!experimentSetup.experimentTypes.gotData">
+    <div [hidden]="!experimentSetup.experimentType.gotData">
         <button [ngClass]="state.prevButtonClass()" (click)="state.prevState()">Previous</button>
         <button [ngClass]="state.nextButtonClass()" (click)="state.nextState()">Next</button>
     </div>

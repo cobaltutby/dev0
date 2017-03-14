@@ -48,10 +48,10 @@ export class StateService
                 break;
             case "ExperimentType":
                 //blocked = !((this.experimentSetup.calculatedFormulations.gotData === true));
-                blocked = !this.experimentSetup.experimentTypes.selected.gotData;
+                blocked = !this.experimentSetup.experimentType.selected.gotData;
                 break;
             case "TestFormulations":
-                blocked = !this.experimentSetup.experimentTypes.gotData;
+                blocked = !this.experimentSetup.experimentType.gotData;
                 break;
             case "ProcessParameters":
                 blocked = false;
@@ -89,7 +89,7 @@ export class StateService
         {
             return true;
         }
-        if (typeof this.experimentSetup.experimentTypes != 'undefined' && this.experimentSetup.experimentTypes.gotData === true)
+        if (typeof this.experimentSetup.experimentType != 'undefined' && this.experimentSetup.experimentType.gotData === true)
         {
             return false;
         }        

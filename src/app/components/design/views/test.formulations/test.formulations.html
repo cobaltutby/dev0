@@ -1,11 +1,11 @@
 <div>
     <h2>Test formulations</h2>
     
-    <div *ngIf="!experimentSetup.experimentTypes.gotData">
+    <div *ngIf="!experimentSetup.experimentType.gotData">
         <p>Total Quantity: {{experimentSetup.experimentInfo.totalQuantity.quantity}} {{experimentSetup.experimentInfo.totalQuantity.unit}}</p>
     </div>
     
-    <div *ngIf="experimentSetup.experimentTypes.gotData">    
+    <div *ngIf="experimentSetup.experimentType.gotData">    
         <div class="form-inline pad-bottom">
             <label for="formulationQuantity">Total quantity</label>
             <input type="number" class="form-control" id="formulationQuantity" [(ngModel)]="experimentSetup.experimentInfo.totalQuantity.quantity"/>
@@ -34,7 +34,7 @@
     <div id="allFormulationsPlot"></div>
 
     
-    <div [hidden]="!experimentSetup.experimentTypes.gotData">
+    <div [hidden]="!experimentSetup.experimentType.gotData">
         <button [ngClass]="state.prevButtonClass()" (click)="state.prevState()">Previous</button>
         <button [ngClass]="state.nextButtonClass()" (click)="state.nextState()">Next</button>
     </div>

@@ -116,7 +116,7 @@ export class ExperimentType
 
 export class ExperimentTypeData
 {
-    experimentTypes: Experiment [];
+    experimentType: Experiment [];
 }
 
 export class Experiment
@@ -220,13 +220,13 @@ export class DataService
     parentFormulation:      ParentFormulation;
     processes:              Process [];
     availableTests:         Test [];
-    experimentTypes:        ExperimentType;
+    experimentType:        ExperimentType;
     experimentInfo:         ExperimentInfo;
 
     constructor()
     {
         this.parentFormulation      = new ParentFormulation();
-        this.experimentTypes        = new ExperimentType();
+        this.experimentType        = new ExperimentType();
         this.calculatedFormulations = new CalculatedFormulationsType();
         this.experimentInfo         = new ExperimentInfo();
     }

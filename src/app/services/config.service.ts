@@ -5,7 +5,7 @@ export class ConfigService
 {
     controlPanelProtocol                = 'LabAutomation/LaundryLiquids/Design/ControlPanel';
     experimentCreationProtocol          = 'LabAutomation/LaundryLiquids/Design/CreateExperiment';
-    experimentTypesProtocol             = 'LabAutomation/LaundryLiquids/Design/ExperimentTypes';
+    experimentTypeProtocol             = 'LabAutomation/LaundryLiquids/Design/experimentTypes';
     //parentFormulationProtocol         = 'LabAutomation/LaundryLiquids/Design/ParentFormulation';
     parentFormulationProtocol           = 'LabAutomation/LaundryLiquids/Design/ParentFormulationFromExcel';
     calculateAllFormulationsProtocol    = 'LabAutomation/LaundryLiquids/Design/CalculateAllFormulations';

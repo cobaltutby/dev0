@@ -33,7 +33,7 @@ export class DesignComponent implements OnInit
                 )
     {
 
-        this.design.loadExperimentTypes();
+        this.design.loadexperimentType();
         this.design.loadProcessParameters();
         this.design.loadDefaultTestSchedule();
         this.design.loadAvailableTests();

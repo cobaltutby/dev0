@@ -60,18 +60,18 @@ export class DesignService
         this.newTemp = new Temperature();
     }
     
-    loadExperimentTypes()
+    loadexperimentType()
     {
         let params = {TrialName: this.app.selection.trial_name};
         
-            this.ppService.runProtocolGet(this.configService.experimentTypesProtocol,params)
+            this.ppService.runProtocolGet(this.configService.experimentTypeProtocol,params)
             .subscribe(
                 newdata => {    
                                 let data: ExperimentTypeData = <ExperimentTypeData>newdata;
-                                this.designData.experimentTypes.data = data;
-                                this.designData.experimentTypes.gotData = true;
+                                this.designData.experimentType.data = data;
+                                this.designData.experimentType.gotData = true;
                             }, 
-                error => console.log('loadExperimentTypes: ' + error));
+                error => console.log('loadexperimentType: ' + error));
         
     };
     loadProcessParameters()
@@ -135,7 +135,7 @@ export class DesignService
                             this.experimentSetup.availableTests         = this.designData.availableTests;
                             this.experimentSetup.availableUnits         = this.designData.availableUnits;
                             this.experimentSetup.calculatedFormulations = this.designData.calculatedFormulations;
-                            this.experimentSetup.experimentTypes        = this.designData.experimentTypes;
+                            this.experimentSetup.experimentType        = this.designData.experimentType;
                             this.experimentSetup.gotData                = this.designData.gotData;
                             this.experimentSetup.parentFormulation      = this.designData.parentFormulation;
                             this.experimentSetup.processData            = this.designData.processData;
