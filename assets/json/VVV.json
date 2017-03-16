@@ -1,0 +1,493 @@
+{  
+   "availableUnits":[  
+      "g",
+      "Kg"
+   ],
+   "parentFormulation":{  
+      "formulation":[  
+         {  
+            "name":"MICRO TREATED DEMIN WATER",
+            "%Active":0,
+            "Material Code":"100000002250",
+            "percent_weight":77.782897,
+            "type":"ingredient",
+            "name_key":"ing_MICRO_TREATED_DEMIN_WATER",
+            "distinct_name":"MICRO TREATED DEMIN WATER1",
+            "percent_weight_as_100":77.782897
+         },
+         {  
+            "name":"Fluorescer DSPB type - POWDER",
+            "%Active":100,
+            "Material Code":"100000013413",
+            "percent_weight":0.1,
+            "type":"ingredient",
+            "name_key":"ing_Fluorescer_DSPB_type_-_POWDER",
+            "distinct_name":"Fluorescer DSPB type - POWDER2",
+            "percent_weight_as_100":0.1
+         },
+         {  
+            "name":"Alcohol Ethoxylate Type 24A-7 low C16",
+            "%Active":100,
+            "Material Code":"100000008992",
+            "percent_weight":7,
+            "type":"ingredient",
+            "name_key":"ing_Alcohol_Ethoxylate_Type_24A-7_low_C16",
+            "distinct_name":"Alcohol Ethoxylate Type 24A-7 low C163",
+            "percent_weight_as_100":7
+         },
+         {  
+            "name":"Sodium Hydroxide 32%",
+            "%Active":32,
+            "Material Code":"100000012867",
+            "percent_weight":2.75,
+            "type":"ingredient",
+            "name_key":"ing_Sodium_Hydroxide_32%",
+            "distinct_name":"Sodium Hydroxide 32%4",
+            "percent_weight_as_100":0.88
+         },
+         {  
+            "name":"Triethanolamine (99%)",
+            "%Active":100,
+            "Material Code":"100000007236",
+            "percent_weight":0.4,
+            "type":"ingredient",
+            "name_key":"ing_Triethanolamine_(99%)",
+            "distinct_name":"Triethanolamine (99%)5",
+            "percent_weight_as_100":0.4
+         },
+         {  
+            "name":"Citric Acid Monohydrate",
+            "%Active":100,
+            "Material Code":"100000002532",
+            "percent_weight":0.3,
+            "type":"ingredient",
+            "name_key":"ing_Citric_Acid_Monohydrate",
+            "distinct_name":"Citric Acid Monohydrate6",
+            "percent_weight_as_100":0.3
+         },
+         {  
+            "name":"LAS acid (ex HF LAB MWT 238-244) low klett",
+            "%Active":96.5,
+            "Material Code":"100000007584",
+            "percent_weight":5.968912,
+            "type":"ingredient",
+            "name_key":"ing_LAS_acid_(ex_HF_LAB_MWT_238-244)_low_klett",
+            "distinct_name":"LAS acid (ex HF LAB MWT 238-244) low klett7",
+            "percent_weight_as_100":5.76000008
+         },
+         {  
+            "name":"SLES Laureth-2 Sodium salt 70% Low Alkaline",
+            "%Active":70,
+            "Material Code":"100000002482",
+            "percent_weight":4.285714,
+            "type":"ingredient",
+            "name_key":"ing_SLES_Laureth-2_Sodium_salt_70%_Low_Alkaline",
+            "distinct_name":"SLES Laureth-2 Sodium salt 70% Low Alkaline8",
+            "percent_weight_as_100":2.9999997999999994
+         },
+         {  
+            "name":"Sodium Chloride Powder",
+            "%Active":100,
+            "Material Code":"100000009579",
+            "percent_weight":1,
+            "type":"ingredient",
+            "name_key":"ing_Sodium_Chloride_Powder",
+            "distinct_name":"Sodium Chloride Powder9",
+            "percent_weight_as_100":1
+         },
+         {  
+            "name":"styrene/acrylates opacifier copolymer 301 grade 40%",
+            "%Active":38,
+            "Material Code":"100000001047",
+            "percent_weight":0.131579,
+            "type":"ingredient",
+            "name_key":"ing_styrene/acrylates_opacifier_copolymer_301_grade_40%",
+            "distinct_name":"styrene/acrylates opacifier copolymer 301 grade 40%10",
+            "percent_weight_as_100":0.05000002
+         },
+         {  
+            "name":"CI 45100 Acid Red 52 90% PC",
+            "%Active":100,
+            "Material Code":"100000040674",
+            "percent_weight":0.000074,
+            "type":"ingredient",
+            "name_key":"ing_CI_45100_Acid_Red_52_90%_PC",
+            "distinct_name":"CI 45100 Acid Red 52 90% PC11",
+            "percent_weight_as_100":0.000074
+         },
+         {  
+            "name":"Polymeric Violet LS",
+            "%Active":100,
+            "Material Code":"100000005973",
+            "percent_weight":0.000074,
+            "type":"ingredient",
+            "name_key":"ing_Polymeric_Violet_LS",
+            "distinct_name":"Polymeric Violet LS12",
+            "percent_weight_as_100":0.000074
+         },
+         {  
+            "name":"New Fragrance Template for IFF for use in HomeCare",
+            "%Active":100,
+            "Material Code":"100000067335",
+            "percent_weight":0.28,
+            "type":"ingredient",
+            "name_key":"ing_New_Fragrance_Template_for_IFF_for_use_in_HomeCare",
+            "distinct_name":"New Fragrance Template for IFF for use in HomeCare13",
+            "percent_weight_as_100":0.28
+         },
+         {  
+            "name":"CIT 1.1: MIT 0.4 magnesium salt stabilised",
+            "%Active":100,
+            "Material Code":"100000000487",
+            "percent_weight":0.00075,
+            "type":"ingredient",
+            "name_key":"ing_CIT_1.1:_MIT_0.4_magnesium_salt_stabilised",
+            "distinct_name":"CIT 1.1: MIT 0.4 magnesium salt stabilised14",
+            "percent_weight_as_100":0.00075
+         }
+      ],
+      "gotData":true
+   },
+   "calculatedFormulations":{  
+      "formulations":[  
+
+      ]
+   },
+   "experimentInfo":{  
+      "totalQuantity":{  
+         "quantity":null,
+         "unit":null
+      }
+   },
+   "processData":[  
+      {  
+         "name":"MICRO TREATED DEMIN WATER",
+         "name_key":"ing_MICRO_TREATED_DEMIN_WATER",
+         "percent_weight":77.782897,
+         "type":"ingredient",
+         "percent_weight_as_100":77.782897,
+         "caption":"",
+         "parameter":""
+      },
+      {  
+         "name":"Fluorescer DSPB type - POWDER",
+         "name_key":"ing_Fluorescer_DSPB_type_-_POWDER",
+         "percent_weight":0.1,
+         "type":"ingredient",
+         "percent_weight_as_100":0.1,
+         "caption":"",
+         "parameter":""
+      },
+      {  
+         "name":"Alcohol Ethoxylate Type 24A-7 low C16",
+         "name_key":"ing_Alcohol_Ethoxylate_Type_24A-7_low_C16",
+         "percent_weight":7,
+         "type":"ingredient",
+         "percent_weight_as_100":7,
+         "caption":"",
+         "parameter":""
+      },
+      {  
+         "name":"Sodium Hydroxide 32%",
+         "name_key":"ing_Sodium_Hydroxide_32%",
+         "percent_weight":2.75,
+         "type":"ingredient",
+         "percent_weight_as_100":0.88,
+         "caption":"",
+         "parameter":""
+      },
+      {  
+         "name":"Triethanolamine (99%)",
+         "name_key":"ing_Triethanolamine_(99%)",
+         "percent_weight":0.4,
+         "type":"ingredient",
+         "percent_weight_as_100":0.4,
+         "caption":"",
+         "parameter":""
+      },
+      {  
+         "name":"Citric Acid Monohydrate",
+         "name_key":"ing_Citric_Acid_Monohydrate",
+         "percent_weight":0.3,
+         "type":"ingredient",
+         "percent_weight_as_100":0.3,
+         "caption":"",
+         "parameter":""
+      },
+      {  
+         "name":"LAS acid (ex HF LAB MWT 238-244) low klett",
+         "name_key":"ing_LAS_acid_(ex_HF_LAB_MWT_238-244)_low_klett",
+         "percent_weight":5.968912,
+         "type":"ingredient",
+         "percent_weight_as_100":5.76000008,
+         "caption":"",
+         "parameter":""
+      },
+      {  
+         "name":"SLES Laureth-2 Sodium salt 70% Low Alkaline",
+         "name_key":"ing_SLES_Laureth-2_Sodium_salt_70%_Low_Alkaline",
+         "percent_weight":4.285714,
+         "type":"ingredient",
+         "percent_weight_as_100":2.9999997999999994,
+         "caption":"",
+         "parameter":""
+      },
+      {  
+         "name":"Sodium Chloride Powder",
+         "name_key":"ing_Sodium_Chloride_Powder",
+         "percent_weight":1,
+         "type":"ingredient",
+         "percent_weight_as_100":1,
+         "caption":"",
+         "parameter":""
+      },
+      {  
+         "name":"styrene/acrylates opacifier copolymer 301 grade 40%",
+         "name_key":"ing_styrene/acrylates_opacifier_copolymer_301_grade_40%",
+         "percent_weight":0.131579,
+         "type":"ingredient",
+         "percent_weight_as_100":0.05000002,
+         "caption":"",
+         "parameter":""
+      },
+      {  
+         "name":"CI 45100 Acid Red 52 90% PC",
+         "name_key":"ing_CI_45100_Acid_Red_52_90%_PC",
+         "percent_weight":0.000074,
+         "type":"ingredient",
+         "percent_weight_as_100":0.000074,
+         "caption":"",
+         "parameter":""
+      },
+      {  
+         "name":"Polymeric Violet LS",
+         "name_key":"ing_Polymeric_Violet_LS",
+         "percent_weight":0.000074,
+         "type":"ingredient",
+         "percent_weight_as_100":0.000074,
+         "caption":"",
+         "parameter":""
+      },
+      {  
+         "name":"New Fragrance Template for IFF for use in HomeCare",
+         "name_key":"ing_New_Fragrance_Template_for_IFF_for_use_in_HomeCare",
+         "percent_weight":0.28,
+         "type":"ingredient",
+         "percent_weight_as_100":0.28,
+         "caption":"",
+         "parameter":""
+      },
+      {  
+         "name":"CIT 1.1: MIT 0.4 magnesium salt stabilised",
+         "name_key":"ing_CIT_1.1:_MIT_0.4_magnesium_salt_stabilised",
+         "percent_weight":0.00075,
+         "type":"ingredient",
+         "percent_weight_as_100":0.00075,
+         "caption":"",
+         "parameter":""
+      }
+   ],
+   "experimentType":{  
+      "selected":{  
+         "Type":[  
+            "Stability"
+         ]
+      }
+   },
+   "testSchedule":{  
+      "schedule":[  
+         {  
+            "name":"pH",
+            "weeks":{  
+               "week":[  
+                  {  
+                     "week":0,
+                     "doTest":true
+                  },
+                  {  
+                     "week":1,
+                     "doTest":true
+                  },
+                  {  
+                     "week":2,
+                     "doTest":true
+                  },
+                  {  
+                     "week":4,
+                     "doTest":true
+                  },
+                  {  
+                     "week":8,
+                     "doTest":true
+                  },
+                  {  
+                     "week":12,
+                     "doTest":true
+                  }
+               ]
+            }
+         },
+         {  
+            "name":"Appearance",
+            "weeks":{  
+               "week":[  
+                  {  
+                     "week":0,
+                     "doTest":true
+                  },
+                  {  
+                     "week":1,
+                     "doTest":true
+                  },
+                  {  
+                     "week":2,
+                     "doTest":true
+                  },
+                  {  
+                     "week":4,
+                     "doTest":true
+                  },
+                  {  
+                     "week":8,
+                     "doTest":true
+                  },
+                  {  
+                     "week":12,
+                     "doTest":true
+                  }
+               ]
+            }
+         },
+         {  
+            "name":"Viscosity",
+            "weeks":{  
+               "week":[  
+                  {  
+                     "week":0,
+                     "doTest":true
+                  },
+                  {  
+                     "week":1,
+                     "doTest":true
+                  },
+                  {  
+                     "week":2,
+                     "doTest":true
+                  },
+                  {  
+                     "week":4,
+                     "doTest":true
+                  },
+                  {  
+                     "week":8,
+                     "doTest":true
+                  },
+                  {  
+                     "week":12,
+                     "doTest":true
+                  }
+               ]
+            }
+         }
+      ],
+      "allWeeks":[  
+         {  
+            "week":"0"
+         },
+         {  
+            "week":"1"
+         },
+         {  
+            "week":"2"
+         },
+         {  
+            "week":"4"
+         },
+         {  
+            "week":"8"
+         },
+         {  
+            "week":"12"
+         }
+      ],
+      "temperatures":[  
+         {  
+            "temperature":"Freeze Thaw"
+         },
+         {  
+            "temperature":"5"
+         },
+         {  
+            "temperature":"25"
+         },
+         {  
+            "temperature":"37"
+         },
+         {  
+            "temperature":"45"
+         }
+      ]
+   },
+   "availableTests":[  
+      {  
+         "name":"pH"
+      },
+      {  
+         "name":"Viscosity"
+      },
+      {  
+         "name":"Appearance"
+      },
+      {  
+         "name":"Test 4"
+      },
+      {  
+         "name":"Test 5"
+      },
+      {  
+         "name":"Test 6"
+      }
+   ],
+   "processes":[  
+      {  
+         "name":"High Pressure Homogeniser (HPH)",
+         "caption":"Bar-gauge pressure"
+      },
+      {  
+         "name":"High Shear In-line mixer/mill",
+         "caption":"rpm"
+      },
+      {  
+         "name":"High Shear Mixer/dip-in mill",
+         "caption":"rpm"
+      },
+      {  
+         "name":"Overhear stirrer/mixer",
+         "caption":"rpm"
+      },
+      {  
+         "name":"Heating",
+         "caption":"Degrees C"
+      },
+      {  
+         "name":"Cooling",
+         "caption":"Degrees C"
+      },
+      {  
+         "name":"pH adjustment",
+         "caption":"pH"
+      },
+      {  
+         "name":"Viscosity adjustment",
+         "caption":"mPa.s"
+      },
+      {  
+         "name":"Time",
+         "caption":"minutes"
+      },
+      {  
+         "name":"Split to aliquots",
+         "caption":"g per aliquot"
+      }
+   ]
+}

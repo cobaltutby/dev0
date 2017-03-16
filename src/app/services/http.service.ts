@@ -24,7 +24,6 @@ export class HTTPService
 
   runProtocolGet (protocolPath: string, params?: {}): Observable<any> 
   {
-    console.dir(params);
     let path = 'http://' + this.ppServer + ':' + this.port + '/protocols/' + protocolPath;
     let search: URLSearchParams = new URLSearchParams();
     for(let p in params)
@@ -36,6 +35,13 @@ export class HTTPService
                     .map(this.extract)
                     .catch(this.handleError);
   }
+  runProtocolGetVVV (): Observable<any> 
+  {
+    return this.http.get('assets/json/VVV.json')
+                    .map(this.extract3)
+                    .catch(this.handleError);
+  }
+
   runProtocolGet0 (protocolPath: string, params?: {}): Observable<any> 
   {
     console.log('runProtocolGet0');
@@ -123,22 +129,28 @@ export class HTTPService
   {
     console.log('runProtocolGetStabilityDaya');
     return this.http.get('assets/json/StabilityData.json')
-                    .map(this.extract2)
+                    .map(this.extract)
                     .catch(this.handleError);
   }
   runProtocolPost (protocolPath: string, params?: {}, data?: {}): Observable<any> 
   {
-    console.log('runProtocolPost');
-    console.log('data');
-    console.dir(data);
-    console.log('params');
-    console.dir(params);
+    let headers = new Headers();
+    headers.append('Content-Type','application/json;charset=utf-8;');
+
     let search: URLSearchParams = new URLSearchParams();
     for(let p in params)
     {
        search.set(p, params[p]);
     }
-    return this.http.post('http://' + this.ppServer + ':' + this.port + '/auth/launchjob?_protocol=Protocols/' + protocolPath, data, {search: search}
+    let options = new RequestOptions( {headers: headers, search: search, body: data});
+    let a: HTMLElement;
+    
+    console.log('runProtocolPost');
+    console.log('data');
+    console.dir(data);
+    console.log('options');
+    console.dir(options);
+    return this.http.post('http://' + this.ppServer + ':' + this.port + '/auth/launchjob?_protocol=Protocols/' + protocolPath, data, options
     )
                     .map(this.extract)
                     .catch(this.handleError);
@@ -165,8 +177,7 @@ export class HTTPService
       console.dir(body);
       return body || { };
   }
-    private extract2(res: Response) {
-
+    private extract3(res: Response) {
       let body = res.json();
       return body || { };
   }
@@ -176,8 +187,9 @@ export class HTTPService
       console.log(body);
       return body || { };
   }
-  private handleError (error: Response | any) {
-
+  private handleError (error: Response | any) 
+  {
+    console.log('handleError');
     let errMsg: string;
     if (error instanceof Response) {
       const body = error.json() || '';

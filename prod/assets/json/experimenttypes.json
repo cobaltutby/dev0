@@ -1,1 +1,0 @@
-{ "experimentType": [ {"Type":["Dose response"],"ing":["Ingredient To Vary","Balancing ingredient"],"number":["Lower limit","Upper limit","Increment"]}, {"Type":["Robustness"],"ing":[],"number":["Variation (%)"],"list":["Ingredient To Vary"]}, {"Type":["Raw material clearance"]}, {"Type":["Stability"]} ] }

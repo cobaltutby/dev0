@@ -26,7 +26,7 @@ export class ExperimentType
 
     changeType()
     {
-      for(let t of this.experimentSetup.experimentType.data.experimentType)
+      for(let t of this.designData.experimentType.data.experimentTypes)
       {
         if(t.Type[0] === this.type)
         {
@@ -37,5 +37,6 @@ export class ExperimentType
         }
       }
         this.experimentSetup.experimentType.selected.gotData = true;
+         this.experimentSetup.experimentType.gotData = true;
     }
 }

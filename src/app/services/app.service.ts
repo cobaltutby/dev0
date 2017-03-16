@@ -144,13 +144,10 @@ export class AppService
     loadTrialData()
     {   
         
-        console.log('loadTrialData');
         this.ppService.runProtocolGet(this.configService.controlPanelProtocol)
           .subscribe(
             newdata =>
                 {   
-                    console.log('newdata');
-                    console.dir(newdata);
                     let data = <CPanelData[]>newdata;
                     this.CPanelData = data;
                     if (this.selection.trial_name != null)

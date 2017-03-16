@@ -10,7 +10,7 @@
                     required [(ngModel)]="type" 
                     (change)="changeType()">
                 
-                <option *ngFor="let i of experimentSetup.experimentType.data.experimentType">{{i.Type}}</option>
+                <option *ngFor="let i of designData.experimentType.data.experimentTypes">{{i.Type}}</option>
             </select>
             </form>
             <div >
@@ -18,7 +18,7 @@
 
                     <select multiple class="form-control" 
                             [name]="sellist" 
-                            [(ngModel)]="experimentSetup.experimentType.selected[list]">
+                            [(ngModel)]="experimentSetup.experimentType[list]">
 
                         <option *ngFor="let PF of experimentSetup.parentFormulation.data.formulation">{{PF.name}}</option>
 
@@ -28,7 +28,7 @@
                 <div *ngFor="let ing of experimentSetup.experimentType.selected.ing">{{ing}}<br/>
 
                     <select class="form-control" 
-                            [(ngModel)]="experimentSetup.experimentType.selected[ing]" 
+                            [(ngModel)]="experimentSetup.experimentType[ing]" 
                             [name]="ing">
 
                         <option *ngFor="let PF1 of experimentSetup.parentFormulation.data.formulation" [value]="PF1.name">{{PF1.name}}</option>
@@ -38,7 +38,7 @@
 
         <!--lower, Upper limits and Increment -->
                 <div *ngFor="let num of experimentSetup.experimentType.selected.number">{{num}}<br/>
-                    <input type="number" [(ngModel)]="experimentSetup.experimentType.selected[num]" [name]="num" step="0.01">
+                    <input type="number" [(ngModel)]="experimentSetup.experimentType[num]" [name]="num" step="0.01">
                 </div>
             </div>
         </div>

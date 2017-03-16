@@ -41,6 +41,7 @@ export class DesignService
     allFormulationsHot:     any;
     parentFormulationHOTDiv: HTMLElement;
     parentFormulationHOT: any;
+    VVV: any;
 
 
     constructor(
@@ -63,16 +64,23 @@ export class DesignService
     loadexperimentType()
     {
         let params = {TrialName: this.app.selection.trial_name};
-        
-            this.ppService.runProtocolGet(this.configService.experimentTypeProtocol,params)
-            .subscribe(
-                newdata => {    
-                                let data: ExperimentTypeData = <ExperimentTypeData>newdata;
-                                this.designData.experimentType.data = data;
-                                this.designData.experimentType.gotData = true;
-                            }, 
-                error => console.log('loadexperimentType: ' + error));
-        
+        this.ppService.runProtocolGetVVV()
+            .subscribe( 
+                newdata => 
+                    {
+                        this.VVV = newdata;
+                    })
+        this.ppService.runProtocolGet(this.configService.experimentTypeProtocol,params)
+        .subscribe(
+            newdata => {    
+                            let data: ExperimentTypeData = <ExperimentTypeData>newdata;
+                            this.designData.experimentType.data = data;
+                            this.designData.experimentType.gotData = true;
+                            console.log('loadexperimentType');
+                            console.dir(this.designData);
+                        }, 
+            error => console.log('loadexperimentType: ' + error));
+    
     };
     loadProcessParameters()
     {
@@ -130,15 +138,15 @@ export class DesignService
                                 {
                                     return;
                                 }
-                            
+                            console.log('loadExistingExperiment');
                             //this.designData = data[0];
-                            this.experimentSetup.availableTests         = this.designData.availableTests;
-                            this.experimentSetup.availableUnits         = this.designData.availableUnits;
-                            this.experimentSetup.calculatedFormulations = this.designData.calculatedFormulations;
-                            this.experimentSetup.experimentType        = this.designData.experimentType;
-                            this.experimentSetup.gotData                = this.designData.gotData;
-                            this.experimentSetup.parentFormulation      = this.designData.parentFormulation;
-                            this.experimentSetup.processData            = this.designData.processData;
+                            this.experimentSetup.availableTests                 = this.designData.availableTests;
+                            //this.experimentSetup.availableUnits               = this.designData.availableUnits;
+                            this.experimentSetup.calculatedFormulations         = this.designData.calculatedFormulations;
+                            this.experimentSetup.experimentType.selected        = this.designData.experimentType.selected;
+                            this.experimentSetup.gotData                        = this.designData.gotData;
+                            this.experimentSetup.parentFormulation.formulation  = this.designData.parentFormulation.data.formulation;
+                            this.experimentSetup.processData                    = this.designData.processData;
                             //this.experimentSetup.processes              = this.designData.processes;
                             //this.experimentSetup.testSchedule           = this.designData.testSchedule;
                             //this.experimentSetup.parentFormulation.gotData = true;
@@ -314,17 +322,59 @@ export class DesignService
     submitExpTypeForm()
     {
         console.log('submitExpTypeForm');
+        //Object.assign(this.experimentSetup.experimentType, this.experimentSetup.experimentType.selected);
+        let itv = this.experimentSetup.experimentType['Ingredient To Vary'];
+        let bi = this.experimentSetup.experimentType['Balancing ingredient'];
+        this.experimentSetup.experimentType['Ingredient To Vary'] = [];
+        this.experimentSetup.experimentType['Balancing ingredient'] = [];
         let params = {TrialName:this.app.selection.trial_name, _bodyParam:"FormData"};
         let data = this.experimentSetup;
         
+        console.dir(this.experimentSetup);
+        if( Array.isArray(itv))
+        {
+            for(let formulation of this.experimentSetup.parentFormulation.data.formulation)
+            {
+                for(let i in itv)
+                {
+                    if(i == formulation.name)
+                    {
+                        this.experimentSetup.experimentType['Ingredient To Vary'].push(formulation);
+                    }
+                }
+
+            }
+        }
+        else
+        {
+            for(let formulation of this.experimentSetup.parentFormulation.data.formulation)
+            {
+                if(itv == formulation.name)
+                {
+                    this.experimentSetup.experimentType['Ingredient To Vary'] = formulation;
+                }
+            }
+        }
+
+        for(let formulation of this.experimentSetup.parentFormulation.data.formulation)
+        {
+            if(bi == formulation.name)
+            {
+                this.experimentSetup.experimentType['Balancing ingredient'] = formulation;
+            }
+
+        }
+
+        console.log('runProtocolPost');
         this.ppService.runProtocolPost(this.configService.calculateAllFormulationsProtocol, params, data)
             .subscribe( newdata => 
-                {
+                {   console.log('newdata');
+                    console.dir(newdata);
                     let data: CalculatedFormulation [] = newdata.formulation;
                     this.experimentSetup.calculatedFormulations.data = data;
                     this.experimentSetup.calculatedFormulations.gotData = true;
                     this.designData.calculatedFormulations.data = this.experimentSetup.calculatedFormulations.data;
-                    this.experimentSetup.availableUnits = ["g", "Kg"];
+                    //this.experimentSetup.availableUnits = ["g", "Kg"];
                     this.setUpAllFormulationsHOT();
                 },  error => 
                 {

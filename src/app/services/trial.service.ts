@@ -44,7 +44,6 @@ export class TrialService
     
     loadAllData(stateName: string)
     {
-        console.log('loadAllData');
         if(stateName != 'create')
         {
             this.state.current

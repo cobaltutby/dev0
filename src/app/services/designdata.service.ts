@@ -19,7 +19,6 @@ export class DesignDataService extends DataService
     
     getData(trialName: string)
     { 
-        console.log('DesignDataService getData');
         let designParams = {TrialName:trialName};
         this.ppService.runProtocolGetDesignData(this.configService.designProtocol, designParams)
             .subscribe(

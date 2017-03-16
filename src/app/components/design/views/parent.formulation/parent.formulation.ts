@@ -35,9 +35,8 @@ export class ParentFormulationComponent implements OnInit
     }
     ngOnInit()
     {
-        console.log('ParentFormulationComponent ngOnInit');
-           this.design.parentFormulationHOTDiv = document.getElementById('parentFormulationHOT');
-           if(this.designData.parentFormulation.gotData) this.design.setUpParentFormulationHOT();
+        this.design.parentFormulationHOTDiv = document.getElementById('parentFormulationHOT');
+        if(this.designData.parentFormulation.gotData) this.design.setUpParentFormulationHOT();
     }
 
     uploadThenRunProtocol($event:any) 
@@ -87,8 +86,10 @@ export class ParentFormulationComponent implements OnInit
                 newdata =>  {
                                 let data:ParentFormulationData = newdata;
                                 this.designData.parentFormulation.data = data;
+                                this.designData.parentFormulation.formulation = data.formulation;
                                 this.experimentSetup.parentFormulation.data = this.designData.parentFormulation.data;
                                 this.designData.parentFormulation.gotData = true;
+                                this.experimentSetup.parentFormulation.formulation = this.experimentSetup.parentFormulation.formulation;
                                 this.experimentSetup.parentFormulation.gotData = this.designData.parentFormulation.gotData;
                                 this.experimentSetup.processData = data.formulation;
                                 this.design.setUpParentFormulationHOT();

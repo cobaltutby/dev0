@@ -66,6 +66,7 @@ export class Temperature
 
 export class ParentFormulation
 {
+    formulation: Formulation [];
     data: ParentFormulationData;
     gotData: boolean;
     constructor()
@@ -99,14 +100,15 @@ export class Formulation
     gotData?: boolean;
     caption?: string;
     parameter?: string;
+    distinct_name?: string;
 }
 
 
 export class ExperimentType
 {
-    data: ExperimentTypeData;
-    selected: SelectedExperiment;
-    gotData: boolean;
+    data:       ExperimentTypeData;
+    selected:   SelectedExperiment;
+    gotData:    boolean;
     constructor()
     {
         this.selected = new SelectedExperiment();
@@ -116,7 +118,7 @@ export class ExperimentType
 
 export class ExperimentTypeData
 {
-    experimentType: Experiment [];
+    experimentTypes: Experiment [];
 }
 
 export class Experiment
@@ -175,6 +177,7 @@ export class CPanelData
 
 export class CalculatedFormulationsType
 {
+    formulations:   CalculatedFormulation [];
     data:           CalculatedFormulation [];
     gotData:        boolean;
     totalQuantity:  TotalQuantity;
@@ -216,19 +219,20 @@ export class DataService
     calculatedFormulations: CalculatedFormulationsType; 
     testSchedule:           TestSchedule;
     processData:            Formulation[];
-    availableUnits:         string [];
+    //availableUnits:         string [];
     parentFormulation:      ParentFormulation;
     processes:              Process [];
     availableTests:         Test [];
-    experimentType:        ExperimentType;
+    experimentType:         ExperimentType;
     experimentInfo:         ExperimentInfo;
 
     constructor()
     {
         this.parentFormulation      = new ParentFormulation();
-        this.experimentType        = new ExperimentType();
+        this.experimentType         = new ExperimentType();
         this.calculatedFormulations = new CalculatedFormulationsType();
         this.experimentInfo         = new ExperimentInfo();
+        //this.availableUnits         = ['g', 'Kg'];
     }
 }
 

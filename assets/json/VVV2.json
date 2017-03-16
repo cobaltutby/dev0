@@ -1,0 +1,734 @@
+{  
+   "processes":[  
+      {  
+         "name":"High Pressure Homogeniser (HPH)",
+         "caption":"Bar-gauge pressure"
+      },
+      {  
+         "name":"High Shear In-line mixer/mill",
+         "caption":"rpm"
+      },
+      {  
+         "name":"High Shear Mixer/dip-in mill",
+         "caption":"rpm"
+      },
+      {  
+         "name":"Overhear stirrer/mixer",
+         "caption":"rpm"
+      },
+      {  
+         "name":"Heating",
+         "caption":"Degrees C"
+      },
+      {  
+         "name":"Cooling",
+         "caption":"Degrees C"
+      },
+      {  
+         "name":"pH adjustment",
+         "caption":"pH"
+      },
+      {  
+         "name":"Viscosity adjustment",
+         "caption":"mPa.s"
+      },
+      {  
+         "name":"Time",
+         "caption":"minutes"
+      },
+      {  
+         "name":"Split to aliquots",
+         "caption":"g per aliquot"
+      }
+   ],
+   "availableTests":[  
+      {  
+         "name":"pH"
+      },
+      {  
+         "name":"Viscosity"
+      },
+      {  
+         "name":"Appearance"
+      },
+      {  
+         "name":"Test 4"
+      },
+      {  
+         "name":"Test 5"
+      },
+      {  
+         "name":"Test 6"
+      }
+   ],
+   "testSchedule":{  
+      "schedule":[  
+         {  
+            "name":"pH",
+            "weeks":{  
+               "week":[  
+                  {  
+                     "week":0,
+                     "doTest":true
+                  },
+                  {  
+                     "week":1,
+                     "doTest":true
+                  },
+                  {  
+                     "week":2,
+                     "doTest":true
+                  },
+                  {  
+                     "week":4,
+                     "doTest":true
+                  },
+                  {  
+                     "week":8,
+                     "doTest":true
+                  },
+                  {  
+                     "week":12,
+                     "doTest":true
+                  }
+               ]
+            }
+         },
+         {  
+            "name":"Appearance",
+            "weeks":{  
+               "week":[  
+                  {  
+                     "week":0,
+                     "doTest":true
+                  },
+                  {  
+                     "week":1,
+                     "doTest":true
+                  },
+                  {  
+                     "week":2,
+                     "doTest":true
+                  },
+                  {  
+                     "week":4,
+                     "doTest":true
+                  },
+                  {  
+                     "week":8,
+                     "doTest":true
+                  },
+                  {  
+                     "week":12,
+                     "doTest":true
+                  }
+               ]
+            }
+         },
+         {  
+            "name":"Viscosity",
+            "weeks":{  
+               "week":[  
+                  {  
+                     "week":0,
+                     "doTest":true
+                  },
+                  {  
+                     "week":1,
+                     "doTest":true
+                  },
+                  {  
+                     "week":2,
+                     "doTest":true
+                  },
+                  {  
+                     "week":4,
+                     "doTest":true
+                  },
+                  {  
+                     "week":8,
+                     "doTest":true
+                  },
+                  {  
+                     "week":12,
+                     "doTest":true
+                  }
+               ]
+            }
+         }
+      ],
+      "allWeeks":[  
+         {  
+            "week":"0"
+         },
+         {  
+            "week":"1"
+         },
+         {  
+            "week":"2"
+         },
+         {  
+            "week":"4"
+         },
+         {  
+            "week":"8"
+         },
+         {  
+            "week":"12"
+         }
+      ],
+      "temperatures":[  
+         {  
+            "temperature":"Freeze Thaw"
+         },
+         {  
+            "temperature":"5"
+         },
+         {  
+            "temperature":"25"
+         },
+         {  
+            "temperature":"37"
+         },
+         {  
+            "temperature":"45"
+         }
+      ]
+   },
+   "parentFormulation":{  
+      "formulation":[  
+         {  
+            "name":"MICRO TREATED DEMIN WATER",
+            "%Active":0,
+            "Material Code":"100000002250",
+            "percent_weight":77.560861,
+            "type":"ingredient",
+            "name_key":"ing_MICRO_TREATED_DEMIN_WATER",
+            "distinct_name":"MICRO TREATED DEMIN WATER1",
+            "percent_weight_as_100":77.560861
+         },
+         {  
+            "name":"Fluorescer DSBP type - POWDER",
+            "%Active":90,
+            "Material Code":"100000013413",
+            "percent_weight":0.1,
+            "type":"ingredient",
+            "name_key":"ing_Fluorescer_DSBP_type_-_POWDER",
+            "distinct_name":"Fluorescer DSBP type - POWDER2",
+            "percent_weight_as_100":0.09000000000000001
+         },
+         {  
+            "name":"MICRO TREATED DEMIN WATER",
+            "%Active":100,
+            "Material Code":"100000002250",
+            "percent_weight":0.666667,
+            "type":"ingredient",
+            "name_key":"ing_MICRO_TREATED_DEMIN_WATER",
+            "distinct_name":"MICRO TREATED DEMIN WATER3",
+            "percent_weight_as_100":0.666667
+         },
+         {  
+            "name":"Sodium Chloride Powder",
+            "%Active":99.5,
+            "Material Code":"100000009579",
+            "percent_weight":0.201005,
+            "type":"ingredient",
+            "name_key":"ing_Sodium_Chloride_Powder",
+            "distinct_name":"Sodium Chloride Powder4",
+            "percent_weight_as_100":0.199999975
+         },
+         {  
+            "name":"CITRIC ACID (50% LIQUID)",
+            "%Active":50,
+            "Material Code":"100000009132",
+            "percent_weight":0.6,
+            "type":"ingredient",
+            "name_key":"ing_CITRIC_ACID_(50%_LIQUID)",
+            "distinct_name":"CITRIC ACID (50% LIQUID)5",
+            "percent_weight_as_100":0.3
+         },
+         {  
+            "name":"Sodium Hydroxide (min 45%  pure)",
+            "%Active":47,
+            "Material Code":"100000007956",
+            "percent_weight":2.893617,
+            "type":"ingredient",
+            "name_key":"ing_Sodium_Hydroxide_(min_45%__pure)",
+            "distinct_name":"Sodium Hydroxide (min 45%  pure)6",
+            "percent_weight_as_100":1.35999999
+         },
+         {  
+            "name":"Triethanolamine (99%)",
+            "%Active":100,
+            "Material Code":"100000007236",
+            "percent_weight":0.4,
+            "type":"ingredient",
+            "name_key":"ing_Triethanolamine_(99%)",
+            "distinct_name":"Triethanolamine (99%)7",
+            "percent_weight_as_100":0.4
+         },
+         {  
+            "name":"Alcohol Ethoxylate Type 24A-7 low C16",
+            "%Active":100,
+            "Material Code":"100000008992",
+            "percent_weight":5,
+            "type":"ingredient",
+            "name_key":"ing_Alcohol_Ethoxylate_Type_24A-7_low_C16",
+            "distinct_name":"Alcohol Ethoxylate Type 24A-7 low C168",
+            "percent_weight_as_100":5
+         },
+         {  
+            "name":"LAS acid (ex HF LAB MWT 238-244) low klett",
+            "%Active":96.5,
+            "Material Code":"100000007584",
+            "percent_weight":8.041451,
+            "type":"ingredient",
+            "name_key":"ing_LAS_acid_(ex_HF_LAB_MWT_238-244)_low_klett",
+            "distinct_name":"LAS acid (ex HF LAB MWT 238-244) low klett9",
+            "percent_weight_as_100":7.760000215
+         },
+         {  
+            "name":"MICRO TREATED DEMIN WATER",
+            "%Active":100,
+            "Material Code":"100000002250",
+            "percent_weight":0.333333,
+            "type":"ingredient",
+            "name_key":"ing_MICRO_TREATED_DEMIN_WATER",
+            "distinct_name":"MICRO TREATED DEMIN WATER10",
+            "percent_weight_as_100":0.333333
+         },
+         {  
+            "name":"SLES Laureth-2 Sodium salt 70% Low Alkaline",
+            "%Active":70,
+            "Material Code":"100000002482",
+            "percent_weight":2.142867,
+            "type":"ingredient",
+            "name_key":"ing_SLES_Laureth-2_Sodium_salt_70%_Low_Alkaline",
+            "distinct_name":"SLES Laureth-2 Sodium salt 70% Low Alkaline11",
+            "percent_weight_as_100":1.5000068999999998
+         },
+         {  
+            "name":"Methyl Ester Sulfonate Paste 70%",
+            "%Active":100,
+            "Material Code":"100000109037",
+            "percent_weight":1.5,
+            "type":"ingredient",
+            "name_key":"ing_Methyl_Ester_Sulfonate_Paste_70%",
+            "distinct_name":"Methyl Ester Sulfonate Paste 70%12",
+            "percent_weight_as_100":1.5
+         },
+         {  
+            "name":"1,2-Benzoisothiazolin-3-one 20 %",
+            "%Active":20,
+            "Material Code":"100000000468",
+            "percent_weight":0.2,
+            "type":"ingredient",
+            "name_key":"ing_1,2-Benzoisothiazolin-3-one_20_%",
+            "distinct_name":"1,2-Benzoisothiazolin-3-one 20 %13",
+            "percent_weight_as_100":0.04000000000000001
+         },
+         {  
+            "name":"CI 42051:2  Food Blue 5 Home Care Grade",
+            "%Active":100,
+            "Material Code":"100000000283",
+            "percent_weight":0.0002,
+            "type":"ingredient",
+            "name_key":"ing_CI_42051:2__Food_Blue_5_Home_Care_Grade",
+            "distinct_name":"CI 42051:2  Food Blue 5 Home Care Grade14",
+            "percent_weight_as_100":0.0002
+         },
+         {  
+            "name":"MICRO TREATED DEMIN WATER",
+            "%Active":100,
+            "Material Code":"100000002250",
+            "percent_weight":0.04,
+            "type":"ingredient",
+            "name_key":"ing_MICRO_TREATED_DEMIN_WATER",
+            "distinct_name":"MICRO TREATED DEMIN WATER15",
+            "percent_weight_as_100":0.04
+         },
+         {  
+            "name":"WHITE ORCHID UN 151861 B",
+            "%Active":100,
+            "Material Code":"100000002282",
+            "percent_weight":0.3,
+            "type":"ingredient",
+            "name_key":"ing_WHITE_ORCHID_UN_151861_B",
+            "distinct_name":"WHITE ORCHID UN 151861 B16",
+            "percent_weight_as_100":0.3
+         },
+         {  
+            "name":"MICRO TREATED DEMIN WATER",
+            "%Active":100,
+            "Material Code":"100000002250",
+            "percent_weight":0.02,
+            "type":"ingredient",
+            "name_key":"ing_MICRO_TREATED_DEMIN_WATER",
+            "distinct_name":"MICRO TREATED DEMIN WATER17",
+            "percent_weight_as_100":0.02
+         }
+      ],
+      "gotData":true
+   },
+   "processData":[  
+      {  
+         "name":"MICRO TREATED DEMIN WATER",
+         "%Active":0,
+         "Material Code":"100000002250",
+         "percent_weight":77.560861,
+         "type":"ingredient",
+         "name_key":"ing_MICRO_TREATED_DEMIN_WATER",
+         "distinct_name":"MICRO TREATED DEMIN WATER1",
+         "percent_weight_as_100":77.560861
+      },
+      {  
+         "name":"Fluorescer DSBP type - POWDER",
+         "%Active":90,
+         "Material Code":"100000013413",
+         "percent_weight":0.1,
+         "type":"ingredient",
+         "name_key":"ing_Fluorescer_DSBP_type_-_POWDER",
+         "distinct_name":"Fluorescer DSBP type - POWDER2",
+         "percent_weight_as_100":0.09000000000000001
+      },
+      {  
+         "name":"MICRO TREATED DEMIN WATER",
+         "%Active":100,
+         "Material Code":"100000002250",
+         "percent_weight":0.666667,
+         "type":"ingredient",
+         "name_key":"ing_MICRO_TREATED_DEMIN_WATER",
+         "distinct_name":"MICRO TREATED DEMIN WATER3",
+         "percent_weight_as_100":0.666667
+      },
+      {  
+         "name":"Sodium Chloride Powder",
+         "%Active":99.5,
+         "Material Code":"100000009579",
+         "percent_weight":0.201005,
+         "type":"ingredient",
+         "name_key":"ing_Sodium_Chloride_Powder",
+         "distinct_name":"Sodium Chloride Powder4",
+         "percent_weight_as_100":0.199999975
+      },
+      {  
+         "name":"CITRIC ACID (50% LIQUID)",
+         "%Active":50,
+         "Material Code":"100000009132",
+         "percent_weight":0.6,
+         "type":"ingredient",
+         "name_key":"ing_CITRIC_ACID_(50%_LIQUID)",
+         "distinct_name":"CITRIC ACID (50% LIQUID)5",
+         "percent_weight_as_100":0.3
+      },
+      {  
+         "name":"Sodium Hydroxide (min 45%  pure)",
+         "%Active":47,
+         "Material Code":"100000007956",
+         "percent_weight":2.893617,
+         "type":"ingredient",
+         "name_key":"ing_Sodium_Hydroxide_(min_45%__pure)",
+         "distinct_name":"Sodium Hydroxide (min 45%  pure)6",
+         "percent_weight_as_100":1.35999999
+      },
+      {  
+         "name":"Triethanolamine (99%)",
+         "%Active":100,
+         "Material Code":"100000007236",
+         "percent_weight":0.4,
+         "type":"ingredient",
+         "name_key":"ing_Triethanolamine_(99%)",
+         "distinct_name":"Triethanolamine (99%)7",
+         "percent_weight_as_100":0.4
+      },
+      {  
+         "name":"Alcohol Ethoxylate Type 24A-7 low C16",
+         "%Active":100,
+         "Material Code":"100000008992",
+         "percent_weight":5,
+         "type":"ingredient",
+         "name_key":"ing_Alcohol_Ethoxylate_Type_24A-7_low_C16",
+         "distinct_name":"Alcohol Ethoxylate Type 24A-7 low C168",
+         "percent_weight_as_100":5
+      },
+      {  
+         "name":"LAS acid (ex HF LAB MWT 238-244) low klett",
+         "%Active":96.5,
+         "Material Code":"100000007584",
+         "percent_weight":8.041451,
+         "type":"ingredient",
+         "name_key":"ing_LAS_acid_(ex_HF_LAB_MWT_238-244)_low_klett",
+         "distinct_name":"LAS acid (ex HF LAB MWT 238-244) low klett9",
+         "percent_weight_as_100":7.760000215
+      },
+      {  
+         "name":"MICRO TREATED DEMIN WATER",
+         "%Active":100,
+         "Material Code":"100000002250",
+         "percent_weight":0.333333,
+         "type":"ingredient",
+         "name_key":"ing_MICRO_TREATED_DEMIN_WATER",
+         "distinct_name":"MICRO TREATED DEMIN WATER10",
+         "percent_weight_as_100":0.333333
+      },
+      {  
+         "name":"SLES Laureth-2 Sodium salt 70% Low Alkaline",
+         "%Active":70,
+         "Material Code":"100000002482",
+         "percent_weight":2.142867,
+         "type":"ingredient",
+         "name_key":"ing_SLES_Laureth-2_Sodium_salt_70%_Low_Alkaline",
+         "distinct_name":"SLES Laureth-2 Sodium salt 70% Low Alkaline11",
+         "percent_weight_as_100":1.5000068999999998
+      },
+      {  
+         "name":"Methyl Ester Sulfonate Paste 70%",
+         "%Active":100,
+         "Material Code":"100000109037",
+         "percent_weight":1.5,
+         "type":"ingredient",
+         "name_key":"ing_Methyl_Ester_Sulfonate_Paste_70%",
+         "distinct_name":"Methyl Ester Sulfonate Paste 70%12",
+         "percent_weight_as_100":1.5
+      },
+      {  
+         "name":"1,2-Benzoisothiazolin-3-one 20 %",
+         "%Active":20,
+         "Material Code":"100000000468",
+         "percent_weight":0.2,
+         "type":"ingredient",
+         "name_key":"ing_1,2-Benzoisothiazolin-3-one_20_%",
+         "distinct_name":"1,2-Benzoisothiazolin-3-one 20 %13",
+         "percent_weight_as_100":0.04000000000000001
+      },
+      {  
+         "name":"CI 42051:2  Food Blue 5 Home Care Grade",
+         "%Active":100,
+         "Material Code":"100000000283",
+         "percent_weight":0.0002,
+         "type":"ingredient",
+         "name_key":"ing_CI_42051:2__Food_Blue_5_Home_Care_Grade",
+         "distinct_name":"CI 42051:2  Food Blue 5 Home Care Grade14",
+         "percent_weight_as_100":0.0002
+      },
+      {  
+         "name":"MICRO TREATED DEMIN WATER",
+         "%Active":100,
+         "Material Code":"100000002250",
+         "percent_weight":0.04,
+         "type":"ingredient",
+         "name_key":"ing_MICRO_TREATED_DEMIN_WATER",
+         "distinct_name":"MICRO TREATED DEMIN WATER15",
+         "percent_weight_as_100":0.04
+      },
+      {  
+         "name":"WHITE ORCHID UN 151861 B",
+         "%Active":100,
+         "Material Code":"100000002282",
+         "percent_weight":0.3,
+         "type":"ingredient",
+         "name_key":"ing_WHITE_ORCHID_UN_151861_B",
+         "distinct_name":"WHITE ORCHID UN 151861 B16",
+         "percent_weight_as_100":0.3
+      },
+      {  
+         "name":"MICRO TREATED DEMIN WATER",
+         "%Active":100,
+         "Material Code":"100000002250",
+         "percent_weight":0.02,
+         "type":"ingredient",
+         "name_key":"ing_MICRO_TREATED_DEMIN_WATER",
+         "distinct_name":"MICRO TREATED DEMIN WATER17",
+         "percent_weight_as_100":0.02
+      }
+   ],
+   "experimentType":{  
+      "selected":{  
+         "Type":[  
+            "Robustness"
+         ],
+         "ing":[  
+
+         ],
+         "number":[  
+            "Variation (%)"
+         ],
+         "list":[  
+            "Ingredient To Vary"
+         ]
+      },
+      "Ingredient To Vary":[  
+         {  
+            "name":"MICRO TREATED DEMIN WATER",
+            "%Active":0,
+            "Material Code":"100000002250",
+            "percent_weight":77.560861,
+            "type":"ingredient",
+            "name_key":"ing_MICRO_TREATED_DEMIN_WATER",
+            "distinct_name":"MICRO TREATED DEMIN WATER1",
+            "percent_weight_as_100":77.560861
+         },
+         {  
+            "name":"Fluorescer DSBP type - POWDER",
+            "%Active":90,
+            "Material Code":"100000013413",
+            "percent_weight":0.1,
+            "type":"ingredient",
+            "name_key":"ing_Fluorescer_DSBP_type_-_POWDER",
+            "distinct_name":"Fluorescer DSBP type - POWDER2",
+            "percent_weight_as_100":0.09000000000000001
+         },
+         {  
+            "name":"MICRO TREATED DEMIN WATER",
+            "%Active":100,
+            "Material Code":"100000002250",
+            "percent_weight":0.666667,
+            "type":"ingredient",
+            "name_key":"ing_MICRO_TREATED_DEMIN_WATER",
+            "distinct_name":"MICRO TREATED DEMIN WATER3",
+            "percent_weight_as_100":0.666667
+         },
+         {  
+            "name":"Sodium Chloride Powder",
+            "%Active":99.5,
+            "Material Code":"100000009579",
+            "percent_weight":0.201005,
+            "type":"ingredient",
+            "name_key":"ing_Sodium_Chloride_Powder",
+            "distinct_name":"Sodium Chloride Powder4",
+            "percent_weight_as_100":0.199999975
+         },
+         {  
+            "name":"CITRIC ACID (50% LIQUID)",
+            "%Active":50,
+            "Material Code":"100000009132",
+            "percent_weight":0.6,
+            "type":"ingredient",
+            "name_key":"ing_CITRIC_ACID_(50%_LIQUID)",
+            "distinct_name":"CITRIC ACID (50% LIQUID)5",
+            "percent_weight_as_100":0.3
+         },
+         {  
+            "name":"Sodium Hydroxide (min 45%  pure)",
+            "%Active":47,
+            "Material Code":"100000007956",
+            "percent_weight":2.893617,
+            "type":"ingredient",
+            "name_key":"ing_Sodium_Hydroxide_(min_45%__pure)",
+            "distinct_name":"Sodium Hydroxide (min 45%  pure)6",
+            "percent_weight_as_100":1.35999999
+         },
+         {  
+            "name":"Triethanolamine (99%)",
+            "%Active":100,
+            "Material Code":"100000007236",
+            "percent_weight":0.4,
+            "type":"ingredient",
+            "name_key":"ing_Triethanolamine_(99%)",
+            "distinct_name":"Triethanolamine (99%)7",
+            "percent_weight_as_100":0.4
+         },
+         {  
+            "name":"Alcohol Ethoxylate Type 24A-7 low C16",
+            "%Active":100,
+            "Material Code":"100000008992",
+            "percent_weight":5,
+            "type":"ingredient",
+            "name_key":"ing_Alcohol_Ethoxylate_Type_24A-7_low_C16",
+            "distinct_name":"Alcohol Ethoxylate Type 24A-7 low C168",
+            "percent_weight_as_100":5
+         },
+         {  
+            "name":"LAS acid (ex HF LAB MWT 238-244) low klett",
+            "%Active":96.5,
+            "Material Code":"100000007584",
+            "percent_weight":8.041451,
+            "type":"ingredient",
+            "name_key":"ing_LAS_acid_(ex_HF_LAB_MWT_238-244)_low_klett",
+            "distinct_name":"LAS acid (ex HF LAB MWT 238-244) low klett9",
+            "percent_weight_as_100":7.760000215
+         },
+         {  
+            "name":"MICRO TREATED DEMIN WATER",
+            "%Active":100,
+            "Material Code":"100000002250",
+            "percent_weight":0.333333,
+            "type":"ingredient",
+            "name_key":"ing_MICRO_TREATED_DEMIN_WATER",
+            "distinct_name":"MICRO TREATED DEMIN WATER10",
+            "percent_weight_as_100":0.333333
+         },
+         {  
+            "name":"SLES Laureth-2 Sodium salt 70% Low Alkaline",
+            "%Active":70,
+            "Material Code":"100000002482",
+            "percent_weight":2.142867,
+            "type":"ingredient",
+            "name_key":"ing_SLES_Laureth-2_Sodium_salt_70%_Low_Alkaline",
+            "distinct_name":"SLES Laureth-2 Sodium salt 70% Low Alkaline11",
+            "percent_weight_as_100":1.5000068999999998
+         },
+         {  
+            "name":"Methyl Ester Sulfonate Paste 70%",
+            "%Active":100,
+            "Material Code":"100000109037",
+            "percent_weight":1.5,
+            "type":"ingredient",
+            "name_key":"ing_Methyl_Ester_Sulfonate_Paste_70%",
+            "distinct_name":"Methyl Ester Sulfonate Paste 70%12",
+            "percent_weight_as_100":1.5
+         },
+         {  
+            "name":"1,2-Benzoisothiazolin-3-one 20 %",
+            "%Active":20,
+            "Material Code":"100000000468",
+            "percent_weight":0.2,
+            "type":"ingredient",
+            "name_key":"ing_1,2-Benzoisothiazolin-3-one_20_%",
+            "distinct_name":"1,2-Benzoisothiazolin-3-one 20 %13",
+            "percent_weight_as_100":0.04000000000000001
+         },
+         {  
+            "name":"CI 42051:2  Food Blue 5 Home Care Grade",
+            "%Active":100,
+            "Material Code":"100000000283",
+            "percent_weight":0.0002,
+            "type":"ingredient",
+            "name_key":"ing_CI_42051:2__Food_Blue_5_Home_Care_Grade",
+            "distinct_name":"CI 42051:2  Food Blue 5 Home Care Grade14",
+            "percent_weight_as_100":0.0002
+         },
+         {  
+            "name":"MICRO TREATED DEMIN WATER",
+            "%Active":100,
+            "Material Code":"100000002250",
+            "percent_weight":0.04,
+            "type":"ingredient",
+            "name_key":"ing_MICRO_TREATED_DEMIN_WATER",
+            "distinct_name":"MICRO TREATED DEMIN WATER15",
+            "percent_weight_as_100":0.04
+         },
+         {  
+            "name":"WHITE ORCHID UN 151861 B",
+            "%Active":100,
+            "Material Code":"100000002282",
+            "percent_weight":0.3,
+            "type":"ingredient",
+            "name_key":"ing_WHITE_ORCHID_UN_151861_B",
+            "distinct_name":"WHITE ORCHID UN 151861 B16",
+            "percent_weight_as_100":0.3
+         },
+         {  
+            "name":"MICRO TREATED DEMIN WATER",
+            "%Active":100,
+            "Material Code":"100000002250",
+            "percent_weight":0.02,
+            "type":"ingredient",
+            "name_key":"ing_MICRO_TREATED_DEMIN_WATER",
+            "distinct_name":"MICRO TREATED DEMIN WATER17",
+            "percent_weight_as_100":0.02
+         }
+      ],
+      "Variation (%)":10
+   }
+}
